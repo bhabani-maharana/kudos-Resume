@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(255, 0, 76), rgb(234, 0, 255));
+            font-family: 'Roboto Slab', serif;
+        }
+
+        ul {
+            display: block;
+        }
+
+        div {
+            display: block;
+        }
+        input {
+            width: 35%;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 10px 8px;
+            border-radius: 5px;
+            margin-left: 30px;  
+            box-sizing: border-box;
+            color: blanchedalmond;
+            border-bottom: 1px solid white; 
+        }
+        input:focus {
+            background-color:rgba(62, 32, 68, 0.9);
+            border-bottom: 2px solid red;
+        }
+
+        label {
+            padding: 10px 8px;
+            margin-left: 30px;
+        }
+        .container {
+            position: relative;
+        }
+        .content{
+            background:rgba(44,62,80,0.7);
+            /*padding: 30px 30px;*/
+            margin: 100px 150px ;
+            position: relative;
+            display: -webkit-flex;
+            border-radius: 10px;
+            filter: drop-shadow(15px 23px 0.88rem rgba(30, 46, 88,0.25));
+        }
+        form {
+            color: #ffffff;
+            position: relative;
+        }
+
+        select {
+            background-color: rgba(225, 202, 247, 0.7);
+            border: none;
+            padding: 7px 20px;
+            font-size: 15px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        p {
+            color: blanchedalmond;
+            font-size: 24px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .content .form-left {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width: 100%;
+            padding: 30px 30px;
+        }
+
+        .form-right {
+            width: 100%;
+            padding: 30px 30px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: rgba(243, 2, 95, 0.952);
+        }
+
+        .submit {
+            margin-top: 10px;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: white;
+            border: none;
+            color: black;
+        }
+        .submit:hover {
+            background-color: rgb(189, 177, 177);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="side-image"></div>
+        <div class="content">
+            <div class="form-left">
+                <p> General Information </p><br>
+                <form action="" name="form1" >
+                    <label for="fname" style="margin-right: 80px;">First Name *</label>
+                    <label for="lname">Last Name *</label><br>
+                    <input type="text" name="fname" placeholder="First Name" style="margin-right: 30px;">
+                    <input type="text" name="lname" placeholder="Last Name"> <br><br>
+
+                    <label for="email">Email Id *</label><br>
+                    <input type="text" name="email" placeholder="Ex. username@gmail.com" style="width: 50%;"> <br><br>
+
+                    <label for="password" style="margin-right: 80px;">Password *</label>
+                    <label for="confpassword">Confirm Password *</label><br>
+                    <input type="password" name="password" placeholder="Password" style="margin-right: 30px;">
+                    <input type="password" name="confpassword" placeholder="Confirm Password"> <br><br>
+                    
+                    <label for="gender">Gender *</label>
+                    <select>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br><br>
+                    <label for="phoneno" style="margin-right: 50px;">Phone Number *</label>
+                    <label for="phoneno2">Phone Number 2</label><br>
+                    <input type="number" name="phoneno" placeholder="+91-XXXXXXXXXX" style="margin-right: 30px;">
+                    <input type="number" name="phoneno2" placeholder="+91-XXXXXXXXXX"> <br><br>
+                </form>
+            </div>
+
+            <div class="form-right">
+                <p> Address Details </p>
+                <form action="" name="form2" style="padding-top: 20px;">
+                    <label for="add1">Current Address *</label><br>
+                    <input type="text" name="add1" placeholder="Address 1" style="width: 50%;"><br><br>
+                    <label for="add2">Permanent Address</label><br>
+                    <input type="text" name="add2" placeholder="Address 2" style="width: 50%;"> <br><br>
+
+                    <label for="country" style="margin-right: 80px;">Country</label>
+                    <label for="country">State</label><br><br>
+                    <select style="margin-left: 30px; margin-right: 40px;">
+                        <option value="AF">Afghanistan</option>
+                        <option value="AX">Åland Islands</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AD">Andorra</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="IN">India</option>
+                    </select>
+                    <select>
+                        <option value="male">Telengana</option>
+                        <option value="female">Gujurat</option>
+                        <option value="other">Rajesthan</option>
+                        <option value="male">West Bengal</option>
+                        <option value="female">Kolkata</option>
+                        <option value="other">Odisha</option>
+                    </select><br><br>
+                    <label for="city">City *</label><br>
+                    <input type="text" name="city" placeholder="City"> <br><br>
+
+                    <input type="checkbox" value="yes" style="margin:0px;">Subscribe to our news letter?</input><br>
+                    
+                </form>
+                <button class="submit">Register</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
