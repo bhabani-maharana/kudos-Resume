@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to right, rgb(255, 0, 76), rgb(234, 0, 255));
+    background-image: linear-gradient(to right, rgb(0, 110, 255), rgb(0, 255, 213));
     font-family: 'Roboto Slab', serif;
 }
 
@@ -75,7 +75,7 @@ p {
     padding: 30px 30px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgba(243, 2, 95, 0.952);
+    background-color: rgba(155, 2, 243, 0.952);
 }
 
 .submit {
