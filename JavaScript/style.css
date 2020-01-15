@@ -1,0 +1,244 @@
+body {
+    background-image: linear-gradient(to right, rgb(0, 110, 255), rgb(0, 255, 213));
+    font-family: 'Roboto Slab', serif;
+}
+
+ul {
+    display: block;
+}
+
+div {
+    display: block;
+}
+input {
+    width: 35%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 8px;
+    border-radius: 5px;
+    margin-left: 30px;  
+    box-sizing: border-box;
+    color: blanchedalmond;
+    border-bottom: 1px solid white; 
+}
+
+input:focus {
+    background-color:rgba(62, 32, 68, 0.9);
+    border-bottom: 2px solid red;
+}
+
+.container {
+    position: absolute;
+    width: auto;   
+    margin-left: 14%;
+    margin-right: 14%;
+}
+.content{
+    position: absolute;
+    background:rgba(44,62,80,0.7);
+    /*padding: 30px 30px;*/
+    /* margin: 10px 150px ; */
+    position: relative;
+    display: inline-flex;
+    border-radius: 10px;
+    filter: drop-shadow(15px 23px 0.88rem rgba(30, 46, 88,0.25));
+}
+form {
+    color: #ffffff;
+    position: relative;
+}
+.form2 {
+    padding-top: 20px;
+}
+
+.radiobtn > input {
+    width: 3%;
+}
+.radiobtn {
+    margin-left: 10px;
+}
+label {
+    padding: 10px 8px;
+    margin-left: 30px;
+}
+.fname {
+    margin-right: 65px;
+}
+#fname {
+    margin-right: 30px;
+}
+#email, .add1, .add2 {
+    width: 50%;
+}
+.lpass{
+    margin-right: 75px;
+}
+.ipass {
+    margin-right: 30px;
+}
+#ph1 {
+    margin-right: 30px;
+}
+.phone1 {
+    margin-right: 35px;
+}
+.lcountry {
+    margin-right: 80px;
+}
+
+select {
+    background-color: rgba(225, 202, 247, 0.7);
+    border: none;
+    padding: 7px 20px;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 30px;
+    float: left;
+}
+
+p {
+    color: blanchedalmond;
+    font-size: 24px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.content .form-left {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    padding: 30px 30px; margin-right: 5px;
+}
+
+.form-right {
+    width: 100%;
+    padding: 30px 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(0, 102, 255, 0.507); 
+}
+
+.site-name {
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+}
+
+#checkin {
+    margin:0px; padding: 0%; width: 20px;
+}
+
+#submit, button {
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    color: black;
+}
+#submit:hover, button:hover{
+    background-color: rgb(177, 240, 29);
+    color: black;
+}
+
+.modal, .modal2 {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0,0.4);
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content2 {
+    padding: 0;
+    background-color: white;
+}
+
+.modal-body, .modal-body2 {
+    background-color: snow;
+    padding: 20px 15px;
+}
+
+.modal-body2 > p {
+    color: black;
+    text-align: center;
+ 
+}
+.modal-header2  p {
+    color: black;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.close:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.modal-header,.modal-footer{
+    padding: 2px 15px;
+    background: lightseagreen;
+    color: white;
+    text-align: center;
+}
+
+.modal-footer{
+    padding: 12px;
+}
+.modal-header2 {
+    padding: 10px 15px;
+    left: 0;
+    background-color: cadetblue;
+}
+
+.modal-body>p, .modal-body>button {
+    color: black; 
+    background-color: rgb(0, 255, 200);
+}
+.modal-body>button:hover {
+    background-color: rgba(3, 128, 96, 0.74);
+}
+.captcha {
+    border: 2px solid maroon;
+}
+.capinput {
+    background-color: gray;
+}
+#verify {
+    width:80px;
+    height: 80px;
+}
+
+/*Animation of Modal*/
+
+@keyframes slideIn {
+    from{bottom: -300px; opacity: 0;}
+    to{bottom: 0; opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
