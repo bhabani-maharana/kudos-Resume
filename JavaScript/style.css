@@ -1,6 +1,15 @@
 body {
-    background-image: linear-gradient(to right, rgb(0, 110, 255), rgb(0, 255, 213));
+    background-image: linear-gradient(to right, rgb(0, 110, 255), rgb(0, 255, 213)); 
     font-family: 'Roboto Slab', serif;
+    
+}
+
+.bg-image {
+    background-image: url('https://1nt6ky2d0kpj2lrju93ucfag-wpengine.netdna-ssl.com/wp-content/uploads/webinar01172019.jpeg');
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    filter: blur(2px); border: none; padding: 0;
 }
 
 ul {
@@ -36,7 +45,7 @@ input:focus {
 }
 .content{
     position: absolute;
-    background:rgba(44,62,80,0.7);
+    /* background:rgba(44,62,80,0.7); */
     /*padding: 30px 30px;*/
     /* margin: 10px 150px ; */
     position: relative;
@@ -104,11 +113,12 @@ p {
     font-family: 'Roboto Slab', serif;
 }
 
-.content .form-left {
+.form-left {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     width: 100%;
-    padding: 30px 30px; margin-right: 5px;
+    padding: 30px 30px 70px 30px; margin-right: 0px;
+    background-color: rgba(0, 102, 255, 0.8); 
 }
 
 .form-right {
@@ -116,14 +126,14 @@ p {
     padding: 30px 30px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgba(0, 102, 255, 0.507); 
+    background-color: rgba(255, 0, 98, 0.8); 
 }
 
 .site-name {
     text-align: center;
     padding-top: 10px;
     font-family: 'Lobster', cursive;
-    font-size: 35px;
+    font-size: 35px; color: #ffffff;
 }
 
 #checkin {
@@ -140,9 +150,16 @@ p {
     border: none;
     color: black;
 }
+.btnregister {
+    position:absolute;
+    bottom:0;
+    margin-bottom: 15px;
+    margin-left: 40%;
+    width: 20%;
+}
 #submit:hover, button:hover{
-    background-color: rgb(177, 240, 29);
-    color: black;
+    background-image: linear-gradient(to right, rgb(255, 0, 200),rgb(0, 110, 255));
+    color: white;
 }
 
 .modal, .modal2 {
