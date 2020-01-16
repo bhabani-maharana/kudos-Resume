@@ -5,9 +5,9 @@ body {
 }
 
 .bg-image {
-    background-image: url('https://1nt6ky2d0kpj2lrju93ucfag-wpengine.netdna-ssl.com/wp-content/uploads/webinar01172019.jpeg');
-    position: absolute;
-    left: 0; top: 0;
+    background: url('https://1nt6ky2d0kpj2lrju93ucfag-wpengine.netdna-ssl.com/wp-content/uploads/webinar01172019.jpeg') no-repeat center center fixed;
+    position: fixed;
+    left: 0; top: 0; background-size: cover;
     width: 100%; height: 100%;
     filter: blur(2px); border: none; padding: 0;
 }
