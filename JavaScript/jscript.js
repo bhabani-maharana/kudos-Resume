@@ -13,11 +13,11 @@
           //if(document.getElementById("fname") == undefined || document.getElementById("lname") == undefined )
           //  alert("Required");
 
-        if(/[0-9]/.test(fn.value) == true || fn.length == 0) {
+        if(/[0-9]/.test(fn.value) == true || fn.value.length == 0) {
             alert("**Enter a valid First Name"); fn.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++; }
   
 
-        if(/[0-9]/.test(ln.value) == true || ln.length == 0) {
+        if(/[0-9]/.test(ln.value) == true || ln.value.length == 0) {
             alert("**Enter a valid Last Name"); ln.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
 
 
