@@ -14,30 +14,32 @@ var modal = document.getElementById('mymodal');
           //  alert("Required");
 
         if(/[0-9]/.test(fn.value) == true || fn.value.length == 0) {
-            alert("**Enter a valid First Name"); fn.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++; }
+            fn.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++; }
   
         if(/[0-9]/.test(ln.value) == true || ln.value.length == 0) {
-            alert("**Enter a valid Last Name"); ln.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
+            ln.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
 
         if(/[a-zA-Z0-9]+@+gmail.com/.test(em.value) == false) {
-            alert("**Enter a valid Email"); em.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
+            em.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
 
         if(pass.value != cpass.value) {
-           alert("**Password doesn't match."); pass.style.backgroundColor="rgba(37, 35, 37, 0.411)"; 
+           pass.style.backgroundColor="rgba(37, 35, 37, 0.411)"; 
            cpass.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
 
         if(ph.value.length != 10) {
-           alert("**Enter a valid Phone Number"); ph.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
+           ph.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
    
         if(addr.value == "") {
-            alert("**Fill out Address"); addr.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
+            addr.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
 
         if(city.value == "") {
-            alert("**Fill out City"); city.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
-    
+            city.style.backgroundColor="rgba(37, 35, 37, 0.411)"; stat++;}
+        
+
         if(stat == 0) {
             modal.style.display="block";
         }
+        else alert("**Seems like many field are missing or Invalid");
     } 
     
     function focusin(id){
