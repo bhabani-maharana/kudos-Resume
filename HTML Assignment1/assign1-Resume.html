@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <head>
     <title>-Resume-</title>
+    <meta charset="UTF-8">
     <style>
         .potrait{
             margin-left: 250px;
             margin-right: 250px;
             padding: 2px;
+            position: absolute;
         }
 
-        .details {
-            float: left;
+        .details{
+            float: left;;
+            display: inline-flex;
+        }
+        .ppic {
+            width: 100%; height: 100%;
         }
         img {
             margin-left: 420px;
             width: 120px;
             height: 160px;
+            
             border: 1px solid saddlebrown;
         }
+
+        .qualification {
+            padding-top: 130px;
+        }
+
         table {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             width: 100%;
             border: 1px solid black;
             border-collapse: collapse;
         }
-
+        p {
+            background-color:slategray; padding: 8px;color: snow;
+            font-size: 20px;
+        }
+        .contact>span {
+            display:table;
+        }
         td, th, li {
             text-align: left;
             padding: 6px;
         }
 
-        tr:nth-child(even) {
+        tr:nth-child(even), thead {
             background-color:grey;
         }
     </style>
 </head>
 <body>
     <div class="potrait">
-        <h2 style="background-color:slategray; padding: 8px;color: snow;">Bhabani Shankar Maharana</h2>
+        <p>Bhabani Shankar Maharana</p>
         <div class="details">
-            Contact: +91-9178617280<br><br>
-            E-mail:  <u>bhabani.maharana999@gmail.com</u>
-        </div>
-        <img src="D:\1.HTML\demo.jpg" alt="Profile Image">
+            <div class="contact">
+            <span>Phone: +91-9178617280</span>
+            <span>Email:<u>bhabani.maharana999@gmail.com</u></span>
+            </div>
+            <div class="ppic">
+                <img src="demo.jpg" alt="Profile Image">
+            </div>
+        </div><br>
         
-        <hr>
         
+        <div class="qualification">
         <h3><b><u>ACADEMIC QUALIFICATIONS:</u></b></h3>
         <table>
+            <thead>
             <tr>
                 <th>S.N</th>
                 <th>DEGREE / DIPLOMA</th>
@@ -54,6 +77,8 @@
                 <th>PERCENTAGE / DIVISION</th>
                 <th>Y.O.P</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>1.</td>
                 <td>B.Tech(CSE)</td>
@@ -75,8 +100,9 @@
                 <td>68.57%</td>
                 <td>2014</td>
             </tr>
+            </tbody>
         </table>
-
+        </div>
         <h3><u><b>TRAINING & CERTIFICATIONS:</b></u></h3>
         <ul>
             <li>Mobile Application development using Android Studio</li>
@@ -108,10 +134,5 @@
         </ul>
 
     </div>
-
-
-
-
-
 </body>
 </html>
