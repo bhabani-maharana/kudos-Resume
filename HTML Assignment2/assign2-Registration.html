@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <head>
     <title>Registration</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        div {
+            display: block;
+        }
+        body {
+            background-color: #1a1a1a;
+        }
         .container {
+            position: absolute;
+            top: 0;left: 0; width: auto;
+        }
+        .container>img {
             position: relative;
+            width: 100%; height: 180px;
         }
 
-        .url {
+        .url img {
             position:absolute;
-            bottom: 15px;
-            right: 20px;
-            padding: 20px;
-            color: cornsilk;
-            font-size: 15px;
-            font-family: Segoe Print;
+            bottom: 40px;
+            right:0;
+            background-size: 10%; width: 10%; 
         }
+        h2 {
+            text-align: center; font-family: Arial; color: wheat;
+        }
+        .card-container {
+            display: block;
+            padding: 5% 5%;
+            margin-right: 15%;
+       }
 
         .card {
             border-radius: 10px;
@@ -23,15 +43,16 @@
             overflow: hidden;
             display: inline-flex;
             position: relative;
-            margin: 40px;
-            margin-left: 200px;
+            margin: 100px 10% 50px 10%;
+            
         }
 
         .card-heading{
             background: url(https://blog.hubspot.com/hubfs/best-websites-wasting-time-on-internet.jpg) top left/cover no-repeat;
             width: 40%;
-            display:table-cell;
+            display:flex;
             float: left;
+            
         }
 
         .card-body {
@@ -40,10 +61,9 @@
             background: url(black-poly.jpg) ;
             font-weight: 400;
             font-size: 14px;
-            padding: 55px 0px 55px 0px;
+            padding: 45px 0px 50px 0px;
             border-radius: 10px;
-            margin-right: 30%;
-            position: relative;;
+            position: relative;
         }
         input {
             color: white;
@@ -51,7 +71,7 @@
             background: transparent;
             border: none;
             outline: none;
-            padding: 10px 8px;
+            padding: 13px 8px;
             border-radius: 5px;
             margin-left: 30px;
             box-sizing: border-box;
@@ -63,10 +83,24 @@
             border-bottom: 2px solid red;
         }
 
+        form {
+            padding-left: 30px; margin: 0%; color: ivory; font-family: Arial;
+        }
+        select {
+            margin-left:5px;padding: 5px; background-color: dodgerblue;
+        }
+        .lblgender{
+            margin: 30px 40px;
+        }
+        .rbtngender  input{
+            width: 3%;
+            margin-top: 30px;
+        }
+
         .next {
             background-image: linear-gradient(to right, rgb(216, 24, 66), rgb(223, 82, 0));
             margin-right: 400px;
-            border-radius: 25px;
+            border-radius: 10px;
             border: 2px solid white;
             font-size: 20px;
             font-family: Arial;
@@ -76,62 +110,86 @@
             cursor: pointer;
             padding: 10px 22px 10px 22px;
             float: right;
+            margin-top: 30px;
         }
         .next:hover{
-            background-image: linear-gradient(to left,rgb(216, 24, 66), rgb(223, 82, 0));
+            background-image: linear-gradient(to left, rgb(216, 24, 66), rgb(223, 82, 0));
         }
         
         .address {
             background-color: aqua;
-            border-radius: 10px;
-            margin-left: 15%;
-            margin-right: 15%;
+            border-radius: 10px; width: 100%;
+            margin: 0px 10%;
             padding: 20px;
             background-image: url(black-poly.jpg);
+        }
+        .address p input {
+            margin-right: 10px;
+        }
+        .address p {
+            margin-left: 8%;
         }
     </style>
 </head>
 
-<body style="background-color: #1a1a1a">
+<body>
     <div class="container">
-        <img src="amigos.jpg" alt="url" style="width: 100%; height: 280px;">
+        <img src="amigos.jpg" alt="url">
         <div class="url">
-            <h1> Amigos.com</h1>
+            <img src="https://i.pinimg.com/originals/55/e5/ae/55e5ae2fe3ae91a482b7e08e2d5c9c10.png">
         </div>
     </div>
-
+    <div class="card-container">
     <div class="card">
         <div class="card-heading"></div>
         <div class="card-body">  
-            <h2 style="text-align: center; font-family: Arial; color: wheat;"> Sign Up</h2>
+            <h2> Sign Up</h2>
              
-        <form action="" style="padding-left: 30px; margin: 0%; color: ivory; font-family: Arial;">
-            <input type="text" name="fname" placeholder="First Name" style="margin-right: 30px;">
-            <input type="text" name="mname" placeholder="Middle Name"><br><br><br>
-            <input type="text" name="lname" placeholder="Last Name" style="margin-right: 30px;">
-            <input type="text" name="phone" placeholder="Phone Number"><br><br><br>
-            <input type="text" name="eid" placeholder="Email Id" style="margin-right: 30px;"><br><br><br>
+        <form action="">
+            <p>
+                <input type="text" name="fname" placeholder="First Name" maxlength="10">
+                <input type="text" name="mname" placeholder="Middle Name" maxlength="10">
+            </p>
+
+            <p>
+               <input type="text" name="lname" placeholder="Last Name" maxlength="15">
+               <input type="number" name="phone" placeholder="Phone Number" maxlength="10">
+            </p>
+
+            <p>
+                <input type="email" name="eid" placeholder="Email Id" maxlength="20">
+                <input type="date" name="dob" placeholder="D.O.B" style="margin-right: 70px;">
+            </p>
             
-            <input type="text" name="dob" placeholder="D.O.B" style="margin-right: 70px;">
-            <label for="gender">Gender</label>
-            <select style="padding: 5px; background-color: dodgerblue;">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+            <label for="gender" class="lblgender">Gender</label>
+                <div class="rbtngender">
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="other">Other
+                </div>
         </form>
         
         </div>
     </div>
-    <br><br>
+    
     <div class="address">
-        <input type="text" name="fname" placeholder="Current Address" style="margin-right: 30px;">
-        <input type="text" name="mname" placeholder="Permanent Address"><br><br><br>
-        <input type="text" name="lname" placeholder="Country" style="margin-right: 30px;">
-        <input type="text" name="phone" placeholder="State"><br><br><br>
-        <input type="text" name="eid" placeholder="City" style="margin-right: 30px;"><br><br><br>
-        
-        <input type="text" name="dob" placeholder="Pin Code" style="margin-right: 70px;">
-        <a class="next" style="margin-top: 30px;">REGISTER</a>
+        <p>
+            <input type="text" name="currentadd" placeholder="Current Address" maxlength="30">
+            <input type="text" name="permanentadd" placeholder="Permanent Address" maxlength="30">
+        </p>
+        <p>
+            <input type="text" name="country" placeholder="Country" maxlength="10">
+            <input type="text" name="state" placeholder="State" maxlength="10">
+        </p>
+        <p>
+            <input type="text" name="city" placeholder="City" maxlength="10">
+            <input type="number" name="pcode" maxlength="6" placeholder="Pin Code">
+        </p>
+        <p>
+            <input type="password" name="password" placeholder="Password" maxlength="10">
+            <input type="password" name="confpassword" maxlength="10" placeholder="Confirm Password">
+            </p>
+        <a class="next">REGISTER</a>
+    </div>
     </div>
 </body>
