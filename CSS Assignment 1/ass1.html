@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: linear-gradient(to right, rgb(255, 0, 76), rgb(234, 0, 255));
+            background-image: linear-gradient(to right, rgb(255, 0, 76), rgba(140, 0, 255, 0.521));
             font-family: 'Roboto Slab', serif;
         }
 
@@ -16,13 +16,13 @@
             display: block;
         }
         input {
-            width: 35%;
+            width: 75%;
             background: transparent;
             border: none;
             outline: none;
             padding: 10px 8px;
             border-radius: 5px;
-            margin-left: 30px;  
+            margin-left: 30px;  margin-bottom: 10px;
             box-sizing: border-box;
             color: blanchedalmond;
             border-bottom: 1px solid white; 
@@ -31,13 +31,23 @@
             background-color:rgba(62, 32, 68, 0.9);
             border-bottom: 2px solid red;
         }
-
+        #email, #inpadd1, #inpadd2 {
+            width: 100%;
+        }
         label {
             padding: 10px 8px;
             margin-left: 30px;
         }
+
+        .site-name {
+        text-align: center;
+        padding-top: 50px;
+        font-family: 'Lobster', cursive;
+        font-size: 35px;    
+        }
+
         .container {
-            position: relative;
+            position: absolute;
         }
         .content{
             background:rgba(44,62,80,0.7);
@@ -51,23 +61,34 @@
         form {
             color: #ffffff;
             position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0px;
         }
-
+        form label {
+            display: block; margin-top: 5px;
+        }
+        form p {
+            margin: 0;
+        }
         select {
             background-color: rgba(225, 202, 247, 0.7);
             border: none;
-            padding: 7px 20px;
+            padding: 10px 5px;
+            margin-top: 10px;
             font-size: 15px;
-            color: white;
+            color: black;
             border-radius: 5px;
+            width: 70%; height: 80%;
         }
 
         p {
             color: blanchedalmond;
-            font-size: 24px;
             font-family: 'Roboto Slab', serif;
         }
-
+        .form2 {
+            padding-top: 20px;
+        }
         .content .form-left {
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -80,7 +101,7 @@
             padding: 30px 30px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
-            background-color: rgba(243, 2, 95, 0.952);
+            background-color: rgba(2, 38, 243, 0.952);
         }
 
         .submit {
@@ -102,23 +123,33 @@
 <body>
 
     <div class="container">
+        <div class="site-name">WellBeing.com</div>
         <div class="side-image"></div>
         <div class="content">
             <div class="form-left">
                 <p> General Information </p><br>
                 <form action="" name="form1" >
-                    <label for="fname" style="margin-right: 80px;">First Name *</label>
-                    <label for="lname">Last Name *</label><br>
-                    <input type="text" name="fname" placeholder="First Name" style="margin-right: 30px;">
-                    <input type="text" name="lname" placeholder="Last Name"> <br><br>
-
-                    <label for="email">Email Id *</label><br>
-                    <input type="text" name="email" placeholder="Ex. username@gmail.com" style="width: 50%;"> <br><br>
-
-                    <label for="password" style="margin-right: 80px;">Password *</label>
-                    <label for="confpassword">Confirm Password *</label><br>
-                    <input type="password" name="password" placeholder="Password" style="margin-right: 30px;">
-                    <input type="password" name="confpassword" placeholder="Confirm Password"> <br><br>
+                    <p>
+                        <label for="fname">First Name *</label>
+                        <input type="text" name="fname" placeholder="First Name" id="fname">
+                    </p>
+                    <p>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" name="lname" placeholder="Last Name" id="lname">
+                    </p>
+                    <p>
+                        <label for="email">Email Id *</label>
+                        <input type="text" name="email" placeholder="Ex. username@gmail.com" id="email">
+                    </p>
+                    <br>
+                    <p>
+                        <label for="password">Password *</label>
+                        <input type="password" name="password" placeholder="Password" id="password">
+                    </p>
+                    <p>
+                        <label for="confpassword">Confirm Password *</label>
+                        <input type="password" name="confpassword" placeholder="Confirm Password" id="confpassword">
+                    </p>
                     
                     <label for="gender">Gender *</label>
                     <select>
@@ -126,46 +157,61 @@
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                     </select>
-                    <br><br>
-                    <label for="phoneno" style="margin-right: 50px;">Phone Number *</label>
-                    <label for="phoneno2">Phone Number 2</label><br>
-                    <input type="number" name="phoneno" placeholder="+91-XXXXXXXXXX" style="margin-right: 30px;">
-                    <input type="number" name="phoneno2" placeholder="+91-XXXXXXXXXX"> <br><br>
+
+                    <p>
+                        <label for="phoneno">Phone Number *</label>
+                        <input type="number" name="phoneno" placeholder="+91-XXXXXXXXXX" id="phoneno"">
+                    </p>
+                    <p>
+                        <label for="phoneno2">Phone Number 2</label>
+                        <input type="number" name="phoneno2" placeholder="+91-XXXXXXXXXX" id="phoneno2">
+                    </p>
+
                 </form>
             </div>
 
             <div class="form-right">
                 <p> Address Details </p>
-                <form action="" name="form2" style="padding-top: 20px;">
-                    <label for="add1">Current Address *</label><br>
-                    <input type="text" name="add1" placeholder="Address 1" style="width: 50%;"><br><br>
-                    <label for="add2">Permanent Address</label><br>
-                    <input type="text" name="add2" placeholder="Address 2" style="width: 50%;"> <br><br>
-
-                    <label for="country" style="margin-right: 80px;">Country *</label>
-                    <label for="country">State *</label><br><br>
-                    <select style="margin-left: 30px; margin-right: 40px;">
-                        <option value="AF">Afghanistan</option>
-                        <option value="AX">Åland Islands</option>
-                        <option value="AL">Albania</option>
-                        <option value="DZ">Algeria</option>
-                        <option value="AD">Andorra</option>
-                        <option value="BD">Bangladesh</option>
-                        <option value="BT">Bhutan</option>
-                        <option value="IN">India</option>
-                    </select>
-                    <select>
-                        <option value="male">Telengana</option>
-                        <option value="female">Gujurat</option>
-                        <option value="other">Rajesthan</option>
-                        <option value="male">West Bengal</option>
-                        <option value="female">Kolkata</option>
-                        <option value="other">Odisha</option>
-                    </select><br><br>
-                    <label for="city">City *</label><br>
-                    <input type="text" name="city" placeholder="City"> <br><br>
-
-                    <input type="checkbox" value="yes" style="margin:0px;">Subscribe to our news letter?</input><br>
+                <form action="" name="form2" class="form2">
+                    <p>
+                        <label for="inpadd1">Current Address *</label>
+                        <input type="text" name="add1" placeholder="Address 1" id="inpadd1">
+                    </p><br>
+                    <p>
+                        <label for="inpadd2">Permanent Address</label>
+                        <input type="text" name="add2" placeholder="Address 2" id="inpadd2">
+                    </p><br>
+                    <p>
+                        <label for="country">Country</label>
+                        <select>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AD">Andorra</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="IN">India</option>
+                        </select>
+                        
+                    </p>
+                    <p>
+                        <label for="country">State</label>
+                        <select>
+                            <option value="male">Telengana</option>
+                            <option value="female">Gujurat</option>
+                            <option value="other">Rajesthan</option>
+                            <option value="male">West Bengal</option>
+                            <option value="female">Kolkata</option>
+                            <option value="other">Odisha</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="city">City *</label>
+                        <input type="text" name="city" placeholder="City" id="city">
+                    </p><br>
+                    
+                    <input type="checkbox" value="yes">Subscribe to our news letter?</input>
                     
                 </form>
                 <button class="submit">Register</button>
