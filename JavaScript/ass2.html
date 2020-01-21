@@ -16,70 +16,137 @@
         <div class="side-image"></div>
         <div class="content">
             <div class="form-left">
-                <p> General Information</p><br>
+                <p class="pargeninfo"> General Information</p>
                 <form action="" name="form1" >
-                    <label for="fname" class="fname">First Name *</label>
-                    <label for="lname">Last Name *</label><br>
-                    <input type="text" name="fname" id="fname" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="First Name" required>
-                    <input type="text" name="lname" id="lname" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="Last Name" required> <br><br>
-
-                    <label for="email">Email Id *</label><br>
-                    <input type="email" name="email" id="email" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="Ex. username@gmail.com" required> <br><br>
-
-                    <label for="password" class="lpass">Password *</label>
-                    <label for="confpassword">Confirm Password *</label><br>
-                    <input type="password" name="password" placeholder="Password" class="ipass" required>
-                    <input type="password" name="confpassword" placeholder="Confirm Password" required> <br><br>
+                    <p>
+                        <label for="fname" class="fname">First Name *</label>
+                        <input type="text" name="fname" id="fname" maxlength="20" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="First Name" required>
+                    </p>
+                    
+                    <p>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" name="lname" id="lname" maxlength="15" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="Last Name" required>
+                    </p>
+                    
+                    <p>
+                        <label for="Email">Email Id *</label>
+                        <input type="email" name="email" id="Email" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="Ex. username@gmail.com" required>    
+                    </p><br>
+                   
+                    <p>
+                        <label for="pass" class="lpass">Password *</label>
+                        <input type="password" name="password" placeholder="Password" id="pass" oninput="strength(this)" onfocusin="focusin(this)" onfocusout="focusout(this)" required>
+                    </p>
+                    
+                    <p>
+                        <label for="cpass">Confirm Password *</label>
+                        <input type="password" name="confpassword" placeholder="Confirm Password" id="cpass" onfocusin="focusin(this)" onfocusout="focusout(this)" required>
+                    </p>
+                    <span id="passformat"></span><br>
                     
                     <label for="gender">Gender *</label>
-                    <div class="radiobtn" >
-                    <input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
-                    <input type="radio" name="gender" value="other"> Other
-                    </div><br>
+                    <div class="btn">
+                    <ul class="radiobtn">
+                        <li><input type="radio" name="gender" value="male" id="m"><label for="m">Male</label></li>
+                        <li><input type="radio" name="gender" value="female" id="f"><label for="f">Female</label></li>
+                        <li><input type="radio" name="gender" value="other" id="o"><label for="o">Others</label></li>
+                    </ul>
+                    </div>
+                    <p>
+                        <label for="ph1" class="phone1">Phone Number *</label>
+                        <input type="number" name="phoneno" id="ph1" oninput="phonestrength(this)" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="+91-XXXXXXXXXX" required>
+                    </p>
                     
-                    <label for="phoneno" class="phone1">Phone Number *</label>
-                    <label for="phoneno2">Phone Number 2</label><br>
-                    <input type="number" name="phoneno" id="ph1" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="+91-XXXXXXXXXX" required>
-                    <input type="number" name="phoneno2" id="ph2" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="+91-XXXXXXXXXX">
+                    <p>
+                        <label for="ph2">Phone Number 2</label>
+                        <input type="number" name="phoneno2" id="ph2"  onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="+91-XXXXXXXXXX">
+                    </p>
+                    <span id="phoneformat"></span><br>
                 </form>
             </div>
 
             <div class="form-right">
-                <p> Address Details </p>
+                <p class="paradddet"> Address Details </p>
                 <form action="" name="form2" class="form2">
-                    <label for="add1">Current Address *</label><br>
-                    <input type="text" name="add1" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="Address 1" class="add1" required><br><br>
-                    <label for="add2">Permanent Address</label><br>
-                    <input type="text" name="add2" placeholder="Address 2" class="add2"> <br><br>
-
-                    <label for="country" class="lcountry">Country</label>
-                    <label for="country">State</label><br><br>
-                    <select>
-                        <option value="AF">Select</option>
-                        <option value="AF">Afghanistan</option>
-                        <option value="AX">Åland Islands</option>
-                        <option value="AL">Albania</option>
-                        <option value="DZ">Algeria</option>
-                        <option value="AD">Andorra</option>
-                        <option value="BD">Bangladesh</option>
-                        <option value="BT">Bhutan</option>
-                        <option value="IN">India</option>
-                    </select>
-                    <select>
-                        <option value="AF">Select</option>
-                        <option value="male">Telengana</option>
-                        <option value="female">Gujurat</option>
-                        <option value="other">Rajesthan</option>
-                        <option value="male">West Bengal</option>
-                        <option value="female">Kolkata</option>
-                        <option value="other">Odisha</option>
-                    </select><br><br>
-                    <label for="city">City *</label><br>
-                    <input type="text" name="city" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="City" required> <br><br>
-
-                    <input type="checkbox" id="checkin" value="no">Subscribe to our news letter?</input>
-                    
+                    <p>
+                        <label for="inpadd1">Current Address *</label>
+                        <textarea type="text" name="add1" placeholder="Address 1" id="inpadd1" required></textarea>
+                    </p><br>
+                    <p>
+                        <label for="scountry1" class="lcountry">Country</label>
+                        <select id="scountry1">
+                            <option value="null">Select</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AD">Andorra</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="IN">India</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="sstate1">State</label>
+                        <select id="sstate1">
+                            <option value="null">Select</option>
+                            <option value="tel">Telengana</option>
+                            <option value="guj">Gujurat</option>
+                            <option value="raj">Rajesthan</option>
+                            <option value="wb">West Bengal</option>
+                            <option value="kol">Kolkata</option>
+                            <option value="odi">Odisha</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="city1">City *</label>
+                    <input type="text" name="city1" id="city1" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="City" required>
+                    </p><br>
+                    <p>
+                        <label for="inpadd2">Permanent Address</label>
+                        <textarea type="text" name="add2" placeholder="Address 2" id="inpadd2"></textarea>
+                    </p>
+                    <p>
+                        <div class="chkaddress">
+                            <input type="checkbox" id="sameaddress" onclick="copyaddress(this)">
+                            <label for="sameaddress" class="lblsameadd">Same as current address</label>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="scountry2">Country</label>
+                        <select id="scountry2">
+                            <option value="null">Select</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AD">Andorra</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="IN">India</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="sstate2" >State</label>
+                        <select id="sstate2">
+                            <option value="null">Select</option>
+                            <option value="tel">Telengana</option>
+                            <option value="guj">Gujurat</option>
+                            <option value="raj">Rajesthan</option>
+                            <option value="wb">West Bengal</option>
+                            <option value="kol">Kolkata</option>
+                            <option value="odi">Odisha</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="city2" id="lblcity2">City </label>
+                    <input type="text" name="city2" id="city2" onfocusin="focusin(this)" onfocusout="focusout(this)" placeholder="City" required>
+                    </p><br>
+                    <div class="subscribe">
+                        <input type="checkbox" id="checkin" value="no">
+                        <label class="subs" for="checkin">Subscribe to our news letter?</label>
+                    </div>
+                
                 </form>
             </div>
             <button id="submit" class="btnregister" onclick="myfunction()">Register</button>
@@ -111,7 +178,7 @@
         <div class="modal-content2">
             <div class="modal-header2"><p>WellBeing.com</p></div>
                 <div class="modal-body2">
-                    <p>Successfull</p>
+                    <p>Registration Successfull</p>
                     <p>Thank You</p>
                 </div>
         </div>
