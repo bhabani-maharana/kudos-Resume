@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration Form</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <div class="bg-image"></div>
+    <!--Complete Form-->
+    <div class="container">
+        <div class="site-name">WellBeing.com</div>
+        <div class="side-image"></div>
+        <div class="content">
+            <div class="form-left">
+                <p class="pargeninfo"> General Information</p>
+                <form action="" name="form1" >
+                    <p>
+                        <label for="fname">First Name *</label>
+                        <input type="text" class="js-input" name="fname" id="fname" maxlength="20"  placeholder="First Name" required>
+                    </p>
+                    
+                    <p>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" class="js-input" name="lname" id="lname" maxlength="15"  placeholder="Last Name" required>
+                    </p>
+                    
+                    <p>
+                        <label for="Email">Email Id *</label>
+                        <input type="email" class="js-input" name="email" id="Email"  placeholder="Ex. username@gmail.com" required>    
+                    </p><br>
+                   
+                    <p>
+                        <label for="pass" class="lpass">Password *</label>
+                        <input type="password" class="js-input" name="password" placeholder="Password" id="pass" required>
+                    </p>
+                    
+                    <p>
+                        <label for="cpass">Confirm Password *</label>
+                        <input type="password" class="js-input" name="confpassword" placeholder="Confirm Password" id="cpass" required>
+                    </p>
+                    <span id="passformat"></span><br>
+                    
+                    <label for="gender">Gender *</label>
+                    <div class="btn">
+                    <ul class="radiobtn">
+                        <li><input type="radio" name="gender" value="male" id="m"><label for="m">Male |</label></li>
+                        <li><input type="radio" name="gender" value="female" id="f"><label for="f">Female |</label></li>
+                        <li><input type="radio" name="gender" value="other" id="o"><label for="o">Others</label></li>
+                    </ul>
+                    </div>
+                    <p>
+                        <label for="ph1" class="phone1">Phone Number *</label>
+                        <input type="number" class="js-input" name="phoneno" id="ph1" placeholder="91-XXXXXXXXXX" required>
+                    </p>
+                    
+                    <p>
+                        <label for="ph2">Phone Number 2</label>
+                        <input type="number" class="js-input" name="phoneno2" id="ph2" placeholder="(optional)">
+                    </p>
+                    <span id="phoneformat"></span><br>
+                </form>
+            </div>
+
+            <div class="form-right">
+                <p class="paradddet"> Address Details </p>
+                <form action="" name="form2" class="form2">
+                    <p>
+                        <label for="inpadd1">Current Address *</label>
+                        <textarea type="text" name="add1" placeholder="Address 1" id="inpadd1" required></textarea>
+                    </p><br>
+                    <p>
+                        <label for="scountry1" class="lcountry">Country</label>
+                        <select id="scountry1">
+                            <option value="null">Select</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AD">Andorra</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="IN">India</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="sstate1">State</label>
+                        <select id="sstate1">
+                            <option value="null">Select</option>
+                            <option value="tel">Telengana</option>
+                            <option value="guj">Gujurat</option>
+                            <option value="raj">Rajesthan</option>
+                            <option value="wb">West Bengal</option>
+                            <option value="kol">Kolkata</option>
+                            <option value="odi">Odisha</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="city1">City *</label>
+                    <input type="text" name="city1" class="js-input" id="city1" placeholder="City" required>
+                    </p><br>
+                    <p>
+                        <label for="inpadd2">Permanent Address</label>
+                        <textarea type="text" name="add2" placeholder="Address 2" id="inpadd2"></textarea>
+                    </p>
+                    <p>
+                        <div class="chkaddress">
+                            <input type="checkbox" id="sameaddress">
+                            <label for="sameaddress" class="lblsameadd">Same as current address</label>
+                        </div>
+                    </p>
+                    <p>
+                        <label for="scountry2">Country</label>
+                        <select id="scountry2">
+                            <option value="null">Select</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Åland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AD">Andorra</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="IN">India</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="sstate2" >State</label>
+                        <select id="sstate2">
+                            <option value="null">Select</option>
+                            <option value="tel">Telengana</option>
+                            <option value="guj">Gujurat</option>
+                            <option value="raj">Rajesthan</option>
+                            <option value="wb">West Bengal</option>
+                            <option value="kol">Kolkata</option>
+                            <option value="odi">Odisha</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="city2" id="lblcity2">City </label>
+                    <input type="text" name="city2" class="js-input" id="city2" placeholder="City" required>
+                    </p><br>
+                    <div class="subscribe">
+                        <input type="checkbox" id="checkin" value="no">
+                        <label class="subs" for="checkin">Subscribe to our news letter?</label>
+                    </div>
+                
+                </form>
+            </div>
+            <button id="submit" class="btnregister">Register</button>
+        </div>
+    </div>
+
+    <div class="warning">
+        
+    </div>
+
+    <!-- Modal Division for CAPTCHA-->
+    <div id="mymodal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Verify CAPTCHA</h2>
+        </div>
+        <div class="modal-body">
+            <p id="captcha" style="display:inline-flex;"></p>
+            <input type="number" maxlength="5" id="capinput">
+            <button class="refresh">Refresh</button>
+            <div id="verify"></div>
+        </div>
+        <div class="modal-footer">
+            <button id="ok">Ok</button>
+            <button id="cancel">Cancel</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Division for Successful Registration -->
+    <div id="mymodal2" class="modal2">
+        <div class="modal-content2">
+            <div class="modal-header2"><p>WellBeing.com</p></div>
+                <div class="modal-body2">
+                    <p>Registration Successfull</p>
+                    <p>Thank You</p>
+                </div>
+        </div>
+    </div>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="jquery-left.js"></script>
+    <script src="jquery-right.js"></script>
+</body>

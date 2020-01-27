@@ -1,0 +1,328 @@
+body {
+    background-image: linear-gradient(to right, rgb(0, 110, 255), rgb(0, 255, 213)); 
+    font-family: 'Roboto Slab', serif;
+}
+
+.bg-image {
+    background: url('https://bashooka.com/wp-content/uploads/2018/04/scg-canvas-background-animation-24.jpg') no-repeat center center fixed;
+    position: fixed;
+    left: 0; top: 0; background-size:cover;
+    width: 100%; height: 100%;
+}
+
+div {
+    display: block;
+}
+
+.btn ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+input[type=radio] {
+    margin-left: 12px;
+} 
+
+input{
+    width: 75%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 8px;
+    border-radius: 5px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    color: blanchedalmond;
+    border-bottom: 1px solid white; 
+}
+
+input:focus {
+    background-color:rgba(62, 32, 68, 0.9);
+    border-bottom: 2px solid red;
+}
+
+textarea {
+    width: 100px; height: 50px;
+    margin-left: 35px; color: white;
+    resize: none; border-radius: 8px; 
+    border: none; background: rgba(24, 28, 29, 0.377);
+}
+
+.container {
+    position: absolute;
+    width: auto;
+    margin-left: 14%;
+    margin-right: 14%; padding-bottom: 100px;
+}
+.content{
+    position: relative;
+    display: inline-flex;
+    border-radius: 10px;
+    filter: drop-shadow(15px 23px 0.88rem rgba(30, 46, 88,0.25));
+}
+form {
+    color: #ffffff;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+form p {
+    margin: 0;
+}
+
+form label {
+    display: block; margin-top: 12px;
+}
+
+#Email, #inpadd1, #inpadd2, #city1, #city2 {
+    width: 100%;
+}
+
+.pargeninfo, .paradddet {
+    font-size: 25px;
+}
+
+.radiobtn {
+    margin-top: 10px;
+     display: flexbox; padding-left: 0%;
+}
+
+.btn .radiobtn label {
+    margin: 0%; padding-right: 0%;
+}
+
+label {
+    padding: 5px 8px;
+    margin-left: 30px; font-size: 16px;
+}
+
+select {
+    background-color: rgba(225, 202, 247, 0.7);
+    border: none;
+    padding: 7px 20px;
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+    margin-left: 35px;
+    float: left;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.form-left {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    padding: 10px 30px; padding-bottom: 120px;
+    background-color: rgba(116, 224, 197, 0.795); 
+}
+
+.form-right {
+    width: 100%;
+    padding: 10px 30px; padding-bottom: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(58, 23, 255); 
+}
+.form-right p, .form-right label{
+    color: #ffffff;
+}
+.form-left p, .form-left label {
+    color: black;
+}
+.site-name {
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 35px; color: #ffffff;
+}
+
+#checkin {
+    margin:22px 20px;
+    width: 20px;
+}
+
+#passformat, #phoneformat {
+    font-size: 10px; display: inline;
+    margin-left: 20px; margin-right: 0px;
+    color: rgb(255, 0, 0);
+}
+
+.chkaddress, .subscribe {
+    display: -webkit-box;
+    left: 0; margin-top: 20px; margin: 0px;
+
+}
+.lblsameadd {
+    margin: 0px; margin-left: 20px;
+    padding: 0%;
+}
+
+.subscribe {
+    margin-right: -60px;
+    margin-top: 0px;
+}
+
+#submit, button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    color: black;
+}
+.btnregister {
+    position:absolute;
+    bottom:0;
+    margin-bottom: 15px;
+    margin-left: 40%;
+    width: 20%;
+}
+#submit:hover, button:hover{
+    background-image: linear-gradient(to right, rgb(84, 65, 252),rgb(53, 156, 240));
+    color: white;
+}
+
+.modal, .modal2 {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0,0.4);
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content2 {
+    padding: 0;
+    background-color: white;
+}
+
+.modal-body, .modal-body2 {
+    background-color: snow;
+    padding: 20px 15px;
+}
+
+.modal-body2 > p {
+    color: black;
+    text-align: center;
+ 
+}
+.modal-header2 p {
+    color: black;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.close:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.modal-header,.modal-footer{
+    padding: 2px 15px;
+    background: lightseagreen;
+    color: white;
+    text-align: center;
+}
+
+.modal-footer{
+    padding: 12px;
+}
+.modal-header2 {
+    padding: 10px 15px;
+    left: 0;
+    background-color: cadetblue;
+}
+
+.modal-body>p, .modal-body>button {
+    color: black; 
+    background-color: rgb(0, 255, 200);
+}
+.modal-body>button:hover {
+    background-color: rgba(3, 128, 96, 0.74);
+}
+.captcha {
+    border: 2px solid maroon;
+}
+#capinput {
+    background-color: gray;
+}
+#verify {
+    width:80px;
+    height: 80px;
+}
+
+
+/*-----FOR JQUERY STYLES --------*/
+.errorstyle {
+    background-color: rgba(37, 35, 37, 0.411);
+    border: 2px solid red;
+}
+
+.errorfocusin {
+    border: none;
+    border-bottom: 1px solid red ;
+    background-color: rgba(62, 32, 68, 0.9);
+}
+
+.errorfocusout {
+    border-bottom: 1px solid white;
+    background-color:transparent;
+
+}
+
+.verifiedicon {
+    background: url('verified.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+.notverifiedicon {
+    background: url('notverified.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.warning {
+    margin: 25% 0% 0% 30%; padding: 20px; width: 40%; height: 80px;
+    display:block; color: rgb(0, 0, 0); border-radius: 10px;
+    background-color: white; position: absolute;
+}
+
+/*Animation of Modal*/
+
+@keyframes slideIn {
+    from{bottom: -300px; opacity: 0;}
+    to{bottom: 0; opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
