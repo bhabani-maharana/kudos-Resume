@@ -1,64 +1,66 @@
 $(document).ready(function() {
-    var stat; $('.warning').hide();
+    var Stat; var Passmatch; 
+    $('.warning').hide();
     $('#submit').bind('click', function(event) {
-        stat=0;
-        var fname = $('#fname');    var lname = $('#lname');
+        Stat=0; Passmatch=0;
+        var Fname = $('#fname');    var lname = $('#lname');
         
-        var email = $('#Email');
-        var phone1 = $('#ph1');     var phone2 = $("#ph2");
-        var pass = $('input[name=password]');   var cpass = $('input[name=confpassword]');
-        var add1 = $('textarea[name=add1]');    var add2 = $('textarea[name=add2]');
-        var city = $('#city1');
-        var country1 = $('#scountry1');     var state1 = $('#state1');
+        var Email = $('#Email');
+        var Phone1 = $('#ph1');     var Phone2 = $("#ph2");
+        var Pass = $('input[name=password]');   var Cpass = $('input[name=confpassword]');
+        var Add1 = $('textarea[name=add1]');    var Add2 = $('textarea[name=add2]');
+        var City = $('#city1');
+        var Country1 = $('#scountry1');     var State1 = $('#sstate1');
         
-        if(fname.val().length == 0 || /[0-9()+*-/]/.test(fname.val()) == true) {
-            fname.attr('class','errorstyle');
-            stat++;console.log(stat);
+        if(Fname.val().length === 0 || /[0-9()+*-/]/.test(Fname.val()) === true) {
+            Fname.attr('class','errorstyle');
+            Stat++;console.log(Stat);
             
         }
-        if(lname.val().length == 0 || /[0-9()+*-/]/.test(lname.val()) == true) {
+        if(lname.val().length === 0 || /[0-9()+*-/]/.test(lname.val()) === true) {
             lname.attr('class','errorstyle');
-            stat++;
+            Stat++;
         }
-        if(/^[a-zA-Z0-9.]+@+[a-zA-Z]+?\.[a-zA-Z]{2,3}$/.test(email.val()) == false) {
-            email.attr('class','errorstyle');
-            stat++;
+        if(/^[a-zA-Z0-9.]+@+[a-zA-Z]+?\.[a-zA-Z]{2,3}$/.test(Email.val()) === false) {
+            Email.attr('class','errorstyle');
+            Stat++;
         }
-        if(pass.val() != cpass.val() || pass.val() == 0) {
-            alert("** Password doesn't match");
-            pass.attr('class','errorstyle');
-            cpass.attr('class','errorstyle'); stat++;
+        if(Pass.val() !== Cpass.val() || Pass.val().length === 0) {
+            //alert("** Password doesn't match");
+            Pass.attr('class','errorstyle');
+            Cpass.attr('class','errorstyle'); Passmatch++;
+            $('.warning').text("Password doesn't  match").show(800);
         }
 
-        var radioValue = $("input[name='gender']:checked").val();
-        if(!radioValue){
-                stat++; $('.btn').effect("shake", {times:3}, 1000);
+        var RadioValue = $("input[name='gender']:checked").val();
+        if(!RadioValue){
+                Stat++; $('.btn').effect("shake", {times:3}, 1000);
             }
 
-        if(phone1.val().length != 10) {
-            phone1.attr('class','errorstyle');
-            stat++;
+        if(Phone1.val().length !== 10) {
+            Phone1.attr('class','errorstyle');
+            Stat++;
         }
-        if(phone2.val().length != 10) {
-            //phone2.attr('class','errorstyle');
+        if(Phone2.val().length !== 10) {
+            //Phone2.attr('class','errorstyle');
         }
-        if(add1.val() == "" || add2.val() == "") {
-            stat++;
+        if(Add1.val().length === 0 || Add2.val().length === "") {
+            Stat++;
         }
-        if(city.val() == "") {
-            city.attr('class','errorstyle');
-            stat++;
+        if(City.val() === "") {
+            City.attr('class','errorstyle');
+            Stat++;
         }
-        if(country1.val() == 'null' || state1.val() == 'null') {
-            //alert("** Please specify country and state"); 
-            stat++;
+        if(Country1.val() === 'null' || State1.val() === 'null') {
+            //alert("** Please specify Country and State"); 
+            Stat++;
         }
-        if(stat == 0) {
+        if(Stat === 0 && Passmatch === 0) {
             $('#mymodal').css("display","block");
         }
-        else if(stat > 0) {
+        else if(Stat > 0) {
             //alert("** Seems like some fields are missing");
-            $('.warning').text("Looks like you missed " +stat+" field(s)").show(800);
+            $('.warning').text("Looks like you missed " +Stat+" field(s)").show(800);
             window.addEventListener('mouseup', function(e) {
                 $('.warning').hide(500);
             });
@@ -84,7 +86,7 @@ $(document).ready(function() {
         }
         else {
             $('#passformat').text("Password must contain atleast 1 digit and special character & 7 char long");  
-            stat++;  
+            Stat++;  
         }
     });
 
@@ -94,7 +96,7 @@ $(document).ready(function() {
         }
         else {
             $('#phoneformat').text("Enter a valid number");  
-            stat++;
+            Stat++;
         }
     });
 
