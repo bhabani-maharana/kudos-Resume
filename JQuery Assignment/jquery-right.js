@@ -17,26 +17,26 @@ $(document).ready(function() {
     });
 
     //Verify CAPTCHA---------------------------------
-    var n1 = Math.floor(Math.random().toFixed(2)*100);
-    var n2 = Math.floor(Math.random().toFixed(2)*100);
+    var Num1 = Math.floor(Math.random().toFixed(2)*100);
+    var Num2 = Math.floor(Math.random().toFixed(2)*100);
     var symbol = "/*+-";
     var oper = {'/' : function(a, b){return parseInt(a/b)}, '*': function(a, b){return a*b} ,'+': function(a, b){return a+b}, '-': function(a, b){return a-b}};
 
-    var gensymbol = symbol[Math.floor(Math.random() * symbol.length)];
-    $('#captcha').text(n1+" "+gensymbol+" "+n2);
-    console.log(oper[gensymbol](n1,n2));
+    var Gensymbol = symbol[Math.floor(Math.random() * symbol.length)];
+    $('#captcha').text(Num1+" "+Gensymbol+" "+Num2);
+    console.log(oper[Gensymbol](Num1,Num2));
 
     function refreshfunc() {
-        n1 = Math.floor(Math.random().toFixed(2)*100);
-        n2 = Math.floor(Math.random().toFixed(2)*100);
-        gensymbol = symbol[Math.floor(Math.random() * symbol.length)];
-        $('#captcha').text(n1+" "+gensymbol+" "+n2);
+        Num1 = Math.floor(Math.random().toFixed(2)*100);
+        Num2 = Math.floor(Math.random().toFixed(2)*100);
+        Gensymbol = symbol[Math.floor(Math.random() * symbol.length)];
+        $('#captcha').text(Num1+" "+Gensymbol+" "+Num2);
         $('#verify').attr('style', 'background:none');
         $('#capinput').val("");
     }
 
     $('#ok').click(function() {
-        if(oper[gensymbol](n1, n2) == $('#capinput').val() && $('#capinput').val().length != 0) {
+        if(oper[Gensymbol](Num1, Num2) == $('#capinput').val() && $('#capinput').val().length != 0) {
             $('#verify').removeAttr('style').attr('class','verifiedicon');
             console.log('working'); 
             setTimeout(() => {
