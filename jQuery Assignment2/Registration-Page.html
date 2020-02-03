@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+    <title>Get Registered</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/page-style.css">
+</head>
+<body>
+    <!-- Card 1( Personal Details ) -->
+    <div class="card-1">
+        <div class="card-image"></div>
+        <div class="content">
+            <div class="form-top">
+                <p class="personinfo"> Personal Information</p>
+                <form action="" name="form1" >
+                    <div>
+                        <div id="verifyicon1"></div>
+                        <input type="text" class="js-input" name="fname" id="fname" maxlength="20" required>
+                        <label>First Name</label>
+                    </div>
+                    
+                    <div>
+                        <div id="verifyicon2"></div>
+                        <input type="text" class="js-input" name="lname" id="lname" maxlength="15" required>
+                        <label>Last Name</label>
+                    </div>
+                    
+                    <div>
+                        <div id="verifyicon3"></div>
+                        <input type="email" class="js-input" name="email" id="Email" maxlength="35" required>    
+                        <label>Email</label>
+                    </div>
+                    
+                    
+                    <div class="selectgender"> 
+                        <span>Gender *</span>
+                        <div class="radiobtn">
+                            <input type="radio" name="gender" value="male" id="m"/>
+                            <span for="m">Male</span>
+                            <input type="radio" name="gender" value="female" id="f"/>
+                            <span for="f">Female </span>
+                            <input type="radio" name="gender" value="other" id="o"/>
+                            <span for="o">Others</span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="test">
+                    <div class="appendphone">
+                            <input type="number" class="js-input phone" name="phoneno" id="ph1" required>
+                            <label>Phone Number</label>
+                            <div class="icon-set">
+                                <div class="addicon"></div>
+                                <div id="verifyicon4"></div>
+                            </div>
+                    </div>
+                    </div>
+
+                    <div>
+                        <div id="verifyicon5"></div>
+                        <input type="text" class="js-input" name="pannumber" id="pan" required>
+                        <label>PAN Number</label>
+                    </div>
+                    
+                    <div>
+                        <div id="verifyicon6"></div>
+                        <input type="number" class="js-input" name="aadharnumber" id="aadhar" required>
+                        <label>Aadhar Number</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+            <div id="profile" class="profilepic">
+                <div class="drop"></div>
+                <div id="rprofile">
+                    <label>Profile Pic</label>
+                </div>
+                    <input type="file" id="mediaFile" />
+            </div>
+
+    </div>
+    <br>
+    <!-- Card 2( Address Details ) -->
+    <div id="multiplecards">
+    <div class="card-2">
+        <div class="card-image2"></div>
+        <div class="content2">
+            <div class="form-bottom">
+                <p class="addressinfo"> Address Information</p>
+                <form action="" name="form2" class="form-2">
+                    <div>
+                        <textarea class="js-input" name="address" id="add1" maxlength="40" required></textarea>
+                        <label>Address</label>
+                    </div>
+                    
+                    <div>
+                        <div class="verifyicon"></div>
+                        <input type="text" class="js-input js-city" name="city" id="city" maxlength="20" required>
+                        <label>City</label>
+                    </div>
+
+                    <div class="selectcountry">
+                    <p>
+                        <span for="scountry1" class="lcountry">Country</span><br>
+                        <select id="country" class="js-country">
+                            
+                        </select>
+                    </p>
+                    <p>
+                        <span for="sstate1" class="lstate">State</span><br>
+                        <select id="state" class="js-state">
+                 
+                        </select>
+                    </p>
+                    </div>
+
+                    <div>
+                        <div class="verifyicon"></div>
+                        <input type="number" class="js-input js-pincode" name="pincode" id="pin" required>
+                        <label>PIN Code</label>
+                    </div>
+
+                    <input type="button" id="addaddress" value="Add Address    "></input>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="final-details"></div>
+    <button id="submit">Submit</button>
+    <button id="clear">Clear</button>
+
+    <div class="warningend">
+    </div>
+
+    <!-- Modal Division for CAPTCHA-->
+    <div id="mymodal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Verify CAPTCHA</h2>
+        </div>
+        <div class="modal-body">
+            <p id="captcha"></p>
+            <input type="number" maxlength="5" id="capinput">
+            <button class="refresh">Refresh</button>
+            <div id="verify"></div>
+        </div>
+        <div class="modal-footer">
+            <button id="ok">Ok</button>
+            <button id="cancel">Cancel</button>
+        </div>
+        </div>
+    </div>
+
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src = "script/jquery-main.js"></script>
+    <script src = "script/countries.js"></script>
+</body>
