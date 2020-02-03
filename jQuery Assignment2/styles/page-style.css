@@ -1,0 +1,438 @@
+body {
+    background-image: linear-gradient(to right, rgba(34, 36, 39, 0.89), rgb(28, 105, 92)); 
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+.personinfo, .addressinfo {
+    font-size: 24px;
+    color: black;
+}
+
+.card-1 {
+    padding:0; 
+    width: 75%;
+    min-width: 300px;
+    max-width: 1024px;
+    background-color: rgba(235, 235, 235, 0.938);
+    color: black; 
+    position: relative;
+    border-radius: 10px;
+    display: inline-flex;
+}
+
+.card-2 {
+    margin-top:3%; margin-left: 10%;
+    background-color: rgba(235, 235, 235, 0.938);
+    color: black; position: relative;
+    border-radius: 10px;
+    width: 75%;
+    min-width: 300px;
+    max-width: 1024px;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    display: inline-flex;
+}
+
+.card-image{
+    background: url(../images/form-left.jpg) no-repeat;
+    padding: 20% 170px;
+    margin-right: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-image2{
+    background: url(https://i.pinimg.com/originals/ae/44/04/ae4404674a8c04a5235ed3d6c6d0d148.jpg) no-repeat;
+    padding: 20% 170px;
+    background-size: 120%;
+    margin-right: 40px;
+    filter: hue-rotate(140deg);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.content {
+    color: black; display: flex;
+    padding-left: 15px;
+    
+}
+.content2 {
+    color: rgba(192, 192, 192, 0.568); display: flex;
+    padding: 10px 280px 0px 20px;
+}
+label {
+    color: black;
+}
+
+form {
+    width: 370px;
+}
+
+input {
+    width: 85%; height: 30px;
+    border-radius: 5px; display: block;
+    border-style: none; border: 1px solid gray;
+    background-color: rgba(52, 209, 233, 0.507);
+    padding-left: 20px; outline: none;
+    margin-bottom: 25px;
+}
+
+.card-1 .content .form-top form > div, 
+.card-2 .content2 .form-bottom form>div {
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.form-top, .form-bottom{
+    text-align: left;
+}
+
+.card-1 .content .form-top form div > label, 
+.card-2 .content2 .form-bottom form div > label {
+    position: absolute;
+    top: 8px;
+    left: 10px; font-size: 14px;
+    color: rgba(26, 26, 26, 0.644);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.card-1 .content .form-top form div input:focus ~ label,
+.card-2 .content2 .form-bottom form div input:focus ~ label,
+.card-2 .content2 .form-bottom form div textarea:focus ~ label,
+.card-2 .content2 .form-bottom form div textarea:valid ~ label,
+.card-1 .content .form-top form div input:valid ~ label,
+.card-2 .content2 .form-bottom form div input:valid ~ label, #ph1:valid ~ label{
+    top: -18px;
+    color: rgb(0, 0, 0);
+}
+
+input[type=radio] {
+    width: 15px;
+}
+.radiobtn {
+    display: inline-flex;
+    margin-left: 18px;
+}
+
+.selectgender {
+    float: left;
+    display: inline-flex;
+    height: 41px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.test {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+#pan, #aadhar {
+    width: 80%;
+}
+.phone {
+    width: 80%;
+}
+#pin {
+    width: 40%;
+    margin-top: 20px;
+}
+
+input:focus{
+    background-color: darkgray;
+    border-bottom: 2px solid red;
+}
+
+.addicon {
+    width: 30px; height: 30px;
+    background: url(https://cdn.pixabay.com/photo/2017/03/19/03/51/material-icon-2155448_640.png);
+    background-repeat: no-repeat;
+    background-size: 180%;
+    filter: drop-shadow(1px 5px 8px gray);
+    background-position: center;
+    margin-top: 2px;
+    margin-left: 0;
+}
+
+.addicon:hover {
+    filter: none;
+}
+.removeicon {
+    width: 30px; height: 30px;
+    background: url(https://icons-for-free.com/iconfiles/png/512/minus+remove+icon-1320183421124253557.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    filter: drop-shadow(10px 5px 8px gray);
+    background-position: center;
+    margin-bottom: 2px;
+}
+.removeicon:hover {
+    filter: none;
+}
+
+.appendphone ,.icon-set {
+    display: inline-flex;
+}
+.appendphone #verifyicon4 {
+    margin-left: 10px;
+}
+
+textarea {
+    width: 280px; height: 70px;
+    color: rgb(0, 0, 0);
+    resize: none; border-radius: 5px; 
+    border: none; background: rgba(171, 173, 177, 0.719);
+    outline: none;
+}
+
+#city {
+    width: 263px;
+    margin-top: 20px;
+}
+
+.selectcountry p {
+    margin: 0px 20px 0px 0px;
+    background-color: rgba(188, 148, 211, 0.349);
+    border: none;
+    padding: 7px 10px;
+    font-size: 15px;
+    color: black; overflow: hidden;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+select {
+    border: none;
+    padding: 5px 15px;
+    outline: none;
+    width: 133px;
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+}
+
+#addaddress {
+    border: 2px solid white; outline: none;
+    width: 40%; height: 30px;
+    background-color: rgb(64, 199, 199);
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+#addaddress:hover {
+    background-color: white;
+    border: 2px solid rgb(64, 199, 199);
+}
+#addaddress:focus {
+    background-color: rgb(180, 180, 180);
+}
+
+.correcticon {
+    width: 20px; height: 20px;
+    background: url(../images/correct.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-top: 7px;
+    float: right;
+}
+.incorrecticon , .child-icon{
+    width: 20px; height: 20px;
+    background: url(../images/incorrect.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-top: 7px;
+    float: right;
+}
+
+span {
+    cursor: pointer;
+    margin-top: 6px;
+}
+.emptyicon {
+    background: none;
+}
+
+.errorstyle{
+    background-color: rgba(37, 35, 37, 0.411);
+    border: 2px solid red;
+}
+
+.errorfocusout {
+    background-color: rgba(52, 209, 233, 0.507);
+    border: 1px solid gray;
+}
+
+button:hover {
+    background-color: rgb(76, 81, 82);
+    color: white;
+}
+
+
+button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: white;
+    border: none; outline: none;
+    color: black;
+}
+/* ------------ MODAL CAPTCHA ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0,0.4);
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+.modal-body {
+    background-color: snow;
+    padding: 20px 15px;
+    display: flex;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.close:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.modal-header,.modal-footer{
+    padding: 2px 15px;
+    background: lightseagreen;
+    color: white;
+    text-align: center;
+}
+
+.modal-footer{
+    padding: 12px;
+}
+
+.modal-body>p, .modal-body>button {
+    color: black; 
+    height: 36px;
+    margin: 0;
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: rgb(0, 255, 200);
+}
+.modal-body>button:hover {
+    background-color: rgba(3, 128, 96, 0.74);
+}
+.captcha {
+    border: 2px solid maroon;
+}
+#capinput {
+    background-color: gray;
+    width: auto;
+}
+#verify {
+    width:80px;
+    height: 80px;
+}
+
+.warningend {
+    margin: 25% 0% 0% 30%; padding: 20px; width: 40%; height: 80px;
+    display:block; color: rgb(255, 255, 255); border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.877); position: fixed;
+    top: 0;
+}
+
+.verifiedicon {
+    background: url('../images/verified.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+.notverifiedicon {
+    background: url('../images/notverified.jfif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+/*Animation of Modal*/
+
+@keyframes slideIn {
+    from{bottom: -300px; opacity: 0;}
+    to{bottom: 0; opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+.potrait {
+    text-align: left;
+    padding: 20px;
+}
+.potrait label {
+    margin-left: 10px;
+    text-decoration: underline;
+
+}
+
+#mediaFile {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    outline: none; border: none;
+    margin: 10px 10px;
+    width: 90px;
+}
+
+#profileImageContainer{
+	height: 250px;
+}
+.display-image{
+    background-image: none;
+}
+.profilepic, .profilepic2 {
+    width: 150px; height: 150px;
+    background-color: rgba(93, 94, 93, 0.342);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute; 
+    border: 2px dashed rgba(0, 0, 0, 0.603);
+    color: black;
+}
+.profilepic:hover {
+    background-color: rgba(116, 110, 110, 0.555);
+}
+
+.drop {
+    background-image: url(../images/drop.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 60px; height: 60px;
+    margin-left: 45px; margin-top: 20px;
+    position: relative;
+}
+
+
+
