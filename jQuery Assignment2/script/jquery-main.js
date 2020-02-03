@@ -119,7 +119,7 @@ $(document).ready(function() {
         e.preventDefault();
         if( x < Maxphone) {
             x++;
-            $(Addphone).append('<div style="display: -webkit-inline-box"><input type="number" class="js-input2" id="ph'+x+'" name="phoneno" placeholder="Phone Number" required/><div class="removeicon"></div><div class="child-icon"></div></div>');
+            $(Addphone).append('<div style="display: inline-flex"><input type="number" class="js-input2" id="ph'+x+'" name="phoneno" placeholder="Phone Number" required/><div class="removeicon"></div><div class="child-icon"></div></div>');
             arr_phone.push('ph'+x);   
             //alert($('#ph2').val());
         }
@@ -154,6 +154,7 @@ $(document).ready(function() {
         }
         if($(this).val().length === 0) {
             $(this).removeClass("errorfocusout errorstyle");
+            $('.child-icon').removeClass("incorrecticon correcticon");
         }
     });
 
