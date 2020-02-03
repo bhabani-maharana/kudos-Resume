@@ -238,7 +238,7 @@ select {
     margin-top: 7px;
     float: right;
 }
-.incorrecticon , .child-icon{
+.incorrecticon{
     width: 20px; height: 20px;
     background: url(../images/incorrect.png);
     background-repeat: no-repeat;
