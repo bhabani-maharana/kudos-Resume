@@ -2,6 +2,7 @@ $(document).ready(function() {
     
     var Stat; 
     var Empty; var Check_error={"firstname": 0, "lastname": 0, "emailid": 0, "gender": 0, "phoneno": 0, "panno": 0, "aadharno": 0, "city": 0, "pincode": 0};
+    var Check_error_add2 = [];
     var Fname = $('#fname');
     var Lname = $('#lname');
     var Email = $('#Email');
@@ -178,6 +179,10 @@ $(document).ready(function() {
             $(this).removeClass('errorstyle').addClass('errorfocusout');
             Check_error.city = 0; 
         }
+        if($(this).val().length === 0) {
+            $(this).removeClass('errorstyle');
+            $(this).prev().removeClass('correcticon incorrecticon');
+        }
     });
 
     $('body').on('keyup','.js-pincode',function() {
@@ -190,6 +195,10 @@ $(document).ready(function() {
             $(this).prev().attr('class','incorrecticon');
             $(this).removeClass('errorfocusout').addClass('errorstyle');
             Check_error.pincode = 1; 
+        }
+        if($(this).val().length === 0) {
+            $(this).removeClass('errorstyle');
+            $(this).prev().removeClass('correcticon incorrecticon');
         }
     });
 
