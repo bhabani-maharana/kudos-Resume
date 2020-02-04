@@ -21,7 +21,6 @@ $(document).ready(function() {
             $(this).prev().attr('class','incorrecticon');
             $(this).addClass('errorstyle');
             Check_error.firstname = 1; 
-            
         }
         if(/[0-9()+*-/]/.test($(this).val()) === false){
             $(this).prev().attr('class','correcticon');
@@ -58,7 +57,6 @@ $(document).ready(function() {
 
     var Testnum = /^[0-9]{10}$/;
     Phone.keyup(function() {
-        $checkGender();
         if(Testnum.test($(this).val()) === true && Phone.val().length !== 0) {
             $('#verifyicon4').attr('class','correcticon');
             $(this).attr('class', 'errorfocusout');
@@ -101,13 +99,14 @@ $(document).ready(function() {
 
     });
 
-    $checkGender = function(){
+    function checkGender(){
+        console.log("JEKS");
         if(!Gender.is(':checked')){            // Checks Gender before moving to Phone Number
-            Check_error.gender = 1;  
+            Empty = 1;  
             $('.radiobtn').effect("shake", {times:1}, 100);
         }
         else {
-            Check_error.gender = 0; 
+            Empty =0; 
         }
     };
 
@@ -134,7 +133,7 @@ $(document).ready(function() {
         x--;
     });
 
-    $('js-input').keyup(function() {
+    $('.js-input').keyup(function() {
         if($(this).val().length === 0) {
             $(this).prev().removeAttr('class');
             $(this).removeClass('errorstyle');
@@ -312,6 +311,9 @@ $(document).ready(function() {
     //------------------ ON SUBMIT BUTTON ---------------------------
 
     $('#submit').click(function() {
+        checkGender();
+        // console.log("hello");
+        
         if(Fname.val().length === 0 || Lname.val().length === 0 || Email.val().length === 0 || !Gender.is(':checked') || Phone.val().length === 0 ||
             Pannum.val().length === 0 || AadharNum.val().length === 0 || Address1.val().length === 0 || City1.val().length === 0 ||
             Pin1.val().length === 0 || $('.js-country').val() === '-1' || $('.js-state').val() === '') {
