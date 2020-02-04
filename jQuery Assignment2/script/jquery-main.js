@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     var Stat; 
-    var Empty;
+    var Empty; var Check_error={"firstname": 0, "lastname": 0, "emailid": 0, "gender": 0, "phoneno": 0, "panno": 0, "aadharno": 0, "city": 0, "pincode": 0};
     var Fname = $('#fname');
     var Lname = $('#lname');
     var Email = $('#Email');
@@ -20,12 +20,13 @@ $(document).ready(function() {
         if(/[0-9()+*-/]/.test($(this).val()) === true) {
             $(this).prev().attr('class','incorrecticon');
             $(this).addClass('errorstyle');
-            Stat = 1;
+            Check_error.firstname = 1; 
+            
         }
         if(/[0-9()+*-/]/.test($(this).val()) === false){
             $(this).prev().attr('class','correcticon');
             $(this).removeClass('errorstyle');
-            Stat = 0;
+            Check_error.firstname = 0;
         }
     });
 
@@ -33,12 +34,12 @@ $(document).ready(function() {
         if(/[0-9()+*-/]/.test($(this).val()) === true) {
             $(this).prev().attr('class','incorrecticon');
             $(this).addClass('errorstyle');
-            Stat = 1;
+            Check_error.lastname = 1; 
         }
         if(/[0-9()+*-/]/.test($(this).val()) === false){
             $(this).prev().attr('class','correcticon');
             $(this).removeClass('errorstyle');
-            Stat = 0;
+            Check_error.lastname = 0; 
         }
     });
 
@@ -46,12 +47,12 @@ $(document).ready(function() {
         if(/^[a-zA-Z0-9.]+@+[a-zA-Z]+?\.[a-zA-Z]{2,3}$/.test(Email.val()) === false) {
             $(this).prev().attr('class','incorrecticon');
             $(this).addClass('errorstyle');
-            Stat = 1;
+            Check_error.emailid = 1; 
         }
         if(/^[a-zA-Z0-9.]+@+[a-zA-Z]+?\.[a-zA-Z]{2,3}$/.test(Email.val()) === true){
             $(this).prev().attr('class','correcticon');
             $(this).removeClass('errorstyle');
-            Stat = 0;
+            Check_error.emailid = 0; 
         }
     });
 
@@ -61,13 +62,13 @@ $(document).ready(function() {
         if(Testnum.test($(this).val()) === true && Phone.val().length !== 0) {
             $('#verifyicon4').attr('class','correcticon');
             $(this).attr('class', 'errorfocusout');
-            Stat = 0;
+            Check_error.phoneno = 0; 
             
         }
         if(Testnum.test($(this).val()) === false && Phone.val().length !== 0) {
             $('#verifyicon4').attr('class','incorrecticon');
             $(this).removeClass('errorfocusout').addClass('errorstyle');
-            Stat = 1;
+            Check_error.phoneno = 1; 
         }
     });
 
@@ -76,12 +77,12 @@ $(document).ready(function() {
         if(Testpan.test(Pannum.val().toUpperCase()) === true && Pannum.val().length !== 0) {
             $(this).prev().attr('class','correcticon');
             $(this).removeClass('errorstyle');
-            Stat = 0;
+            Check_error.panno = 0; 
         }
         if(Testpan.test(Pannum.val().toUpperCase()) === false && Pannum.val().length !== 0) {
             $(this).prev().attr('class','incorrecticon');
             $(this).addClass('errorstyle');
-            Stat = 1;
+            Check_error.panno = 1; 
         }
 
     });
@@ -90,22 +91,24 @@ $(document).ready(function() {
         if(AadharNum.val().length === 12) {
             $(this).prev().removeAttr('class').attr('class','correcticon');
             $(this).attr('class', 'errorfocusout');
-            Stat = 0;
+            Check_error.aadharno = 0; 
         }
         if(AadharNum.val().length !== 12) {
             $(this).prev().attr('class','incorrecticon');
             $(this).addClass('errorstyle');
-            Stat = 1;
+            Check_error.aadharno = 1; 
         }
 
     });
 
     $checkGender = function(){
         if(!Gender.is(':checked')){            // Checks Gender before moving to Phone Number
-            Stat = 1; 
+            Check_error.gender = 1;  
             $('.radiobtn').effect("shake", {times:1}, 100);
         }
-        else    Stat = 0;
+        else {
+            Check_error.gender = 0; 
+        }
     };
 
     var Maxphone = 5;
@@ -121,7 +124,6 @@ $(document).ready(function() {
             x++;
             $(Addphone).append('<div style="display: inline-flex"><input type="number" class="js-input2" id="ph'+x+'" name="phoneno" placeholder="Phone Number" required/><div class="removeicon"></div><div class="child-icon"></div></div>');
             arr_phone.push('ph'+x);   
-            //alert($('#ph2').val());
         }
     });
 
@@ -132,11 +134,15 @@ $(document).ready(function() {
         x--;
     });
 
-    $('body').on('keyup','.js-input', function() {
+    $('js-input').keyup(function() {
         if($(this).val().length === 0) {
             $(this).prev().removeAttr('class');
             $(this).removeClass('errorstyle');
             $('#verifyicon4').removeAttr('class','incorrecticon');
+            Empty = 1;
+        }
+        else {
+            Empty = 0;
         }
     });
 
@@ -144,13 +150,13 @@ $(document).ready(function() {
         if(Testnum.test($(this).val()) === true && $(this).val().length !== 0) {
             $('.child-icon').removeClass('incorrecticon').addClass('correcticon');
             $(this).removeClass('errorstyle').addClass('errorfocusout');
-            Stat = 0;
+            Check_error.phoneno = 0; 
             
         }
         if(Testnum.test($(this).val()) === false && $(this).val().length !== 0) {
             $('.child-icon').removeClass('correcticon').addClass('incorrecticon');
             $(this).removeClass('errorfocusout').addClass('errorstyle');
-            Stat = 1;
+            Check_error.phoneno = 1; 
         }
         if($(this).val().length === 0) {
             $(this).removeClass("errorfocusout errorstyle");
@@ -166,12 +172,12 @@ $(document).ready(function() {
         if(/[0-9()+*-/]/.test($(this).val()) === true) {
             $(this).prev().attr('class','incorrecticon');
             $(this).removeClass('errorfocusout').addClass('errorstyle');
-            Stat = 1;
+            Check_error.city = 1; 
         }
         if(/[0-9()+*-/]/.test($(this).val()) === false && $(this).val().length !== 0) {
             $(this).prev().attr('class','correcticon');
             $(this).removeClass('errorstyle').addClass('errorfocusout');
-            Stat = 0;
+            Check_error.city = 0; 
         }
     });
 
@@ -179,12 +185,12 @@ $(document).ready(function() {
         if($(this).val().length === 6) {
             $(this).prev().removeAttr('class').attr('class','correcticon');
             $(this).removeClass('errorstyle').addClass('errorfocusout');
-            Stat = 0;
+            Check_error.pincode = 0; 
         }
         if($(this).val().length < 6 && $(this).val().length >= 1 || $(this).val().length > 6) {
             $(this).prev().attr('class','incorrecticon');
             $(this).removeClass('errorfocusout').addClass('errorstyle');
-            Stat = 1;
+            Check_error.pincode = 1; 
         }
     });
 
@@ -319,15 +325,20 @@ $(document).ready(function() {
             });
             
         }
-        if(Stat > 0) {
-            //alert("** Seems like some fields are missing");
-            $('.warningend').text("Looks like you entered invalid inputs").show(800);
+        var count = 0;
+        $.each(Check_error, function(key,item) {
+            if(item === 1) {
+                count++;
+            }
+        });
+        if(count > 0) {
+            $('.warningend').text("Looks like you entered "+count+" invalid inputs").show(800);
             window.addEventListener('mouseup', function(e) {
                 $('.warningend').hide(500);
             });
         }
 
-        if(Empty === 0 && Stat === 0) {
+        if(Empty === 0 && count === 0) {
             $('#mymodal').css("display","block");
         }
         Empty = 0;
