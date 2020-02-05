@@ -1,7 +1,8 @@
 $(document).ready(function() {
     
     var Stat; 
-    var Empty; var Check_error={"firstname": 0, "lastname": 0, "emailid": 0, "gender": 0, "phoneno": 0, "panno": 0, "aadharno": 0, "city": 0, "pincode": 0};
+    var Empty;
+    var Check_error = { "firstname": 0, "lastname": 0, "emailid": 0, "gender": 0, "phoneno": 0, "panno": 0, "aadharno": 0, "city": 0, "pincode": 0 };
     var Check_error_add2 = [];
     var Fname = $('#fname');
     var Lname = $('#lname');
@@ -217,7 +218,7 @@ $(document).ready(function() {
         (i-1)+'" required><label>PIN Code</label></div></form></div></div><div class="removeicon" style="position: absolute; right:0" ></div></div>';
         
         $('#multiplecards').append(str);
-        
+        //Check_error_add2.push
         $(".card-"+i).addClass('card-2');
         $(".content"+i).addClass('content2');
         
