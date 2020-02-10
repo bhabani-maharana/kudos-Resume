@@ -149,7 +149,7 @@ $(document).ready(function() {
         i+'"><div class="form-bottom"><p class="addressinfo"> Address Information'+(i-1)+'</p><div class="card form-'+
         i+'" ><div><textarea class="js-input js-add1 js-add2" name="address" id="add'+
         (i-1)+'" maxlength="40" required></textarea><label>Address</label></div><div><div class="verifyicon"></div><input type="text" style="margin-top:20px; width:263px" class="js-input js-city js-add2" name="city" id="city'+
-        (i-1)+'" maxlength="20" required><label>City</label></div><div class="selectcountry js-country"><p><span for="scountry1" class="lcountry">Country</span><br><select class="js-country js-add2" id="country'+
+        (i-1)+'" maxlength="20" required><label>City</label></div><div class="selectcountry"><p><span for="scountry1" class="lcountry">Country</span><br><select class="js-country js-add2" id="country'+
         (i-1)+'"></select></p><p><span for="sstate1" class="lstate">State</span><br><select class="js-state js-add2" id="state'+
         (i-1)+'"></select></p></div><div><div class="verifyicon"></div><input type="text" style="margin-top: 20px; width: 40%" maxlength="6" class="js-input js-pincode js-add2" name="pincode" id="pin'+
         (i-1)+'" required><label>PIN Code</label></div></div></div></div><div class="removeicon" style="position: absolute; right:0" ></div></div>';
