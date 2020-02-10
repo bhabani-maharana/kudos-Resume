@@ -36,7 +36,9 @@ $('body').on('keyup','.js-phone2',function() {           // For Dynamic Phone Nu
 VerifyAltphone = function(id) {
     if($(id).val().match(/^[0-9]{10}$/)) 
         return 0;
-    else 
+    else if(!$(id).val())
+        CheckEmpty($(id).val());
+    else    
         return 1; 
 }
 
