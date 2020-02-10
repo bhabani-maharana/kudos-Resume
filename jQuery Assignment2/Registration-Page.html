@@ -16,7 +16,7 @@
         <div class="content">
             <div class="form-top">
                 <p class="personinfo"> Personal Information</p>
-                <form action="" name="form1" >
+                <div class="form-1" name="form-1" >
                     <div>
                         <div id="verifyicon1"></div>
                         <input type="text" class="js-input" name="fname" id="fname" maxlength="20" required>
@@ -42,16 +42,16 @@
                             <input type="radio" name="gender" value="male" id="m"/>
                             <span><label for="m">Male</label></span>
                             <input type="radio" name="gender" value="female" id="f"/>
-                            <span><label for="f">Female</label></span>
+                            <span><label for="f">Female</label> </span>
                             <input type="radio" name="gender" value="other" id="o"/>
                             <span><label for="o">Others</label></span>
                         </div>
                     </div>
                     
 
-                    <div class="test">
+                    <div class="phone-list">
                     <div class="appendphone">
-                            <input type="number" class="js-input phone" name="phoneno" id="ph1" required>
+                            <input type="text" class="js-input phone" name="phoneno" id="ph1" maxlength="10" required>
                             <label>Phone Number</label>
                             <div class="icon-set">
                                 <div class="addicon"></div>
@@ -62,16 +62,16 @@
 
                     <div>
                         <div id="verifyicon5"></div>
-                        <input type="text" class="js-input" name="pannumber" id="pan" required>
+                        <input type="text" class="js-input" name="pannumber" maxlength="10" id="pan" required>
                         <label>PAN Number</label>
                     </div>
                     
                     <div>
                         <div id="verifyicon6"></div>
-                        <input type="number" class="js-input" name="aadharnumber" id="aadhar" required>
+                        <input type="text" class="js-input" name="aadharnumber" maxlength="12" id="aadhar" required>
                         <label>Aadhar Number</label>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
 
@@ -80,7 +80,7 @@
                 <div id="rprofile">
                     <label>Profile Pic</label>
                 </div>
-                    <input type="file" id="mediaFile" />
+                    <input type="file" id="mediaFile" accept="image/*" />
             </div>
 
     </div>
@@ -92,9 +92,9 @@
         <div class="content2">
             <div class="form-bottom">
                 <p class="addressinfo"> Address Information</p>
-                <form action="" name="form2" class="form-2">
+                <div class="form-2 card" name="form-2">
                     <div>
-                        <textarea class="js-input" name="address" id="add1" maxlength="40" required></textarea>
+                        <textarea class="js-input js-add1" name="address" id="add1" maxlength="40" required></textarea>
                         <label>Address</label>
                     </div>
                     
@@ -121,20 +121,37 @@
 
                     <div>
                         <div class="verifyicon"></div>
-                        <input type="number" class="js-input js-pincode" name="pincode" id="pin" required>
+                        <input type="text" class="js-input js-pincode" maxlength="6" name="pincode" id="pin" required>
                         <label>PIN Code</label>
                     </div>
 
-                    <input type="button" id="addaddress" value="Add Address    "></input>
-                </form>
+                    <button id="addaddress"><label> Add Address</label></button>
+                </div>
             </div>
         </div>
     </div>
     </div>
 
-    <div id="final-details"></div>
+    <div id="finaldetails">
+        <p style="color: white; font-size:30px">Employee Details</p>
+        <div class="profilepic2" id="profile2"></div>
+        <div class="potrait">
+            <p>Name: <label class="e-name"></label></p>
+            <p>Email: <label class="e-email"></label></p>
+            <p>Gender: <label class="e-gender"></label></p>
+            <p>Contact: <label class="e-contact"></label></p>
+            <p>Alternate Contact: <label class="e-altcontact"></label></p>
+            <p>Address: <label class="e-address"></label></p>
+            <p>City: <label class="e-city"></label></p>
+            <p>Country: <label class="e-country"></label></p>
+            <p>State: <label class="e-state"></label></p>
+            <p>Pin Code: <label class="e-pin"></label></p>
+            <p>Alternate Address: <label class="e-altaddress"></label></p>
+        </div>
+    </div>
     <button id="submit">Submit</button>
     <button id="clear">Clear</button>
+    <div class="new-user"><label>New User? Register</label><button class="new">Here</button></div>
 
     <div class="warningend">
     </div>
@@ -162,6 +179,7 @@
     
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-    <script src = "script/jquery-main.js"></script>
+    <script src = "script/common.js"></script>
+    <script src = "script/method-call.js"></script>
     <script src = "script/countries.js"></script>
 </body>
