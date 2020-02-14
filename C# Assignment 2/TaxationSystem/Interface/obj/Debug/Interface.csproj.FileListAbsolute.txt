@@ -2,3 +2,8 @@ D:\5.C#\TaxationSystem\Interface\bin\Debug\Interface.dll
 D:\5.C#\TaxationSystem\Interface\bin\Debug\Interface.pdb
 D:\5.C#\TaxationSystem\Interface\obj\Debug\Interface.dll
 D:\5.C#\TaxationSystem\Interface\obj\Debug\Interface.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Interface\bin\Debug\Interface.dll
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Interface\bin\Debug\Interface.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Interface\obj\Debug\Interface.dll
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Interface\obj\Debug\Interface.pdb

@@ -11,3 +11,13 @@ D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\Interface.pdb
 D:\github-bhabani\mindfire-Intern\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.exe.config
 D:\github-bhabani\mindfire-Intern\C# Assignment 2\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.exe
 D:\github-bhabani\mindfire-Intern\C# Assignment 2\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.exe.config
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.exe
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.csprojResolveAssemblyReference.cache
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.exe
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\Interface.dll
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\LogicLibrary.dll
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\Interface.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\LogicLibrary.pdb

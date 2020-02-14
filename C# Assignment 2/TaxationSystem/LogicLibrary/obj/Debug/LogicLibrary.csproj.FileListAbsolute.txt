@@ -5,3 +5,10 @@ D:\5.C#\TaxationSystem\LogicLibrary\bin\Debug\Interface.pdb
 D:\5.C#\TaxationSystem\LogicLibrary\obj\Debug\LogicLibrary.csprojResolveAssemblyReference.cache
 D:\5.C#\TaxationSystem\LogicLibrary\obj\Debug\LogicLibrary.dll
 D:\5.C#\TaxationSystem\LogicLibrary\obj\Debug\LogicLibrary.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\LogicLibrary\obj\Debug\LogicLibrary.csprojResolveAssemblyReference.cache
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\LogicLibrary\obj\Debug\LogicLibrary.dll
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\LogicLibrary\obj\Debug\LogicLibrary.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\LogicLibrary\bin\Debug\LogicLibrary.dll
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\LogicLibrary\bin\Debug\LogicLibrary.pdb
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\LogicLibrary\bin\Debug\Interface.dll
+C:\Users\mindfire\Desktop\mindfire-Intern-master\mindfire-Intern-master\C# Assignment 2\TaxationSystem\LogicLibrary\bin\Debug\Interface.pdb

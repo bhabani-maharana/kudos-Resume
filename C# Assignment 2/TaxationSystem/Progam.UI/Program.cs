@@ -37,7 +37,23 @@ namespace Progam.UI
                     Console.WriteLine(e.Message);
                 }
             }
-            l1.incomeRange(sal, atc);       //calls incomeRange() in Logic.cs and prints output
+            string tax = l1.incomeRange(sal, atc);       //calls incomeRange() in Logic.cs and prints output
+            if (!tax.Equals("0"))
+            {
+                string[] slabs = tax.Split(',');
+                double s1 = Convert.ToDouble(slabs[0]);
+                double s2 = Convert.ToDouble(slabs[1]);
+                double s3 = Convert.ToDouble(slabs[2]);
+                Console.WriteLine("\n\nSalary > Rs. 2,50,000= Rs." + s1.ToString("#,##0") + "\nSalary > Rs. 5,00,000= Rs." + s2.ToString("#,##0") + "\nSalary > Rs. 10,00,000= Rs." + s2.ToString("#,##0"));
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine("Total Tax Charged: Rs." + (s1+s2+s3).ToString("#,##0"));
+                Console.WriteLine("----------------------------------");
+            }
+            else
+            {
+                Console.WriteLine("No Tax Deducted");
+            }
+            
 
             Console.ReadKey();
 
