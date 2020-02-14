@@ -1,0 +1,13 @@
+D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.exe.config
+D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.exe
+D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.pdb
+D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\LogicLibrary.dll
+D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\LogicLibrary.pdb
+D:\5.C#\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.csprojResolveAssemblyReference.cache
+D:\5.C#\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.exe
+D:\5.C#\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.pdb
+D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\Interface.dll
+D:\5.C#\TaxationSystem\Progam.UI\bin\Debug\Interface.pdb
+D:\github-bhabani\mindfire-Intern\C# Assignment 2\TaxationSystem\Progam.UI\bin\Debug\Progam.UI.exe.config
+D:\github-bhabani\mindfire-Intern\C# Assignment 2\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.exe
+D:\github-bhabani\mindfire-Intern\C# Assignment 2\TaxationSystem\Progam.UI\obj\Debug\Progam.UI.pdb
