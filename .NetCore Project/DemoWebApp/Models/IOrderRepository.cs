@@ -8,5 +8,7 @@ namespace DemoWebApp.Models
     public interface IOrderRepository
     {
         void CreateOrder(Order order);
+        void CreatePieGiftOrder(PieGiftOrder pieGiftOrder);
+
     }
 }

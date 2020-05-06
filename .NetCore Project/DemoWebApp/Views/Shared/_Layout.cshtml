@@ -30,6 +30,10 @@
                 <li class="nav-item">
                     <a class="nav-link"> @await Component.InvokeAsync("CategoryMenu") </a>
                 </li>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li><a asp-controller="PieGift" asp-action="Index">Send a pie</a></li>
+                }
                 <li class="nav-item">
                     <a class="nav-link" asp-controller="ShoppingCart" asp-action="Index">Cart</a>
                 </li>
@@ -45,6 +49,10 @@
                 @if (SignInManager.IsSignedIn(User) && User.IsInRole("Administrators"))
                 {
                     @await Component.InvokeAsync("AdminMenu")
+                    <li class="dropdown">
+                        <a asp-controller="PieManagement"
+                           asp-action="Index">Pie Management</a>
+                    </li>
                 }
                 <li><partial name="_LoginPartial" /></li>
             </ul>

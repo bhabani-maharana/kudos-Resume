@@ -36,5 +36,15 @@ namespace DemoWebApp.Models
         {
             return AllPies.FirstOrDefault(p => p.PieId == pieid);
         }
+
+        public void CreatePie(Pie pie)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdatePie(Pie pie)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -13,6 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using DemoWebApp.Auth;
+using System.Net;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DemoWebApp
 {   
@@ -38,6 +41,7 @@ namespace DemoWebApp
                 options.Password.RequireNonAlphanumeric = true;
                 options.Password.RequireUppercase = true;
                 options.User.RequireUniqueEmail = true;
+                options.User.AllowedUserNameCharacters = " ";
 
             }).AddEntityFrameworkStores<AppDbContext>();
 
@@ -46,17 +50,33 @@ namespace DemoWebApp
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddTransient<IPieReviewRepository, PieReviewRepository>();
+
 
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
             services.AddSession();
             services.AddRazorPages();
 
+            //specify options for the anti forgery here
+            //services.AddAntiforgery(opts => { opts.RequireSsl = true; });
+
+            //anti forgery as global filter
+            services.AddMvc(options =>
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()));
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdministratorsOnly", policy => policy.RequireRole("Administrators"));
                 options.AddPolicy("DeletePie", policy => policy.RequireClaim("Delete Pie", "Delete Pie"));
                 options.AddPolicy("AddPie", policy => policy.RequireClaim("Add Pie", "Add Pie"));
+                options.AddPolicy("MinimumOrderAge", policy => policy.Requirements.Add(new MinimumOrderAgeRequirement(18)));
+            });
+
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                options.ClientId = "545323584392-fg83g7ed9eifsd7arrgr7goacfkunmmu.apps.googleusercontent.com";
+                options.ClientSecret = "iqmysJUqHXkVlw1aL_3qkwyY";
             });
         }
 

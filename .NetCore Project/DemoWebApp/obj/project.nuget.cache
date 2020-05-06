@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uhf4z0p8cTrnXJOZ2h78kqImSuT1FDlz5MBt/3UaYumH/si1X6M8Bw2v4JTNszeSfKCze7HdByMyLOPDfz8qXw==",
+  "dgSpecHash": "kUDMX+dho6dlAwpXV+I7jL3GHj/CcTEV1YPBldaX8kuDgqkDhuJ7W/pCI9giTFypc5L92WxNiejP98+AvN2lmg==",
   "success": true,
   "projectFilePath": "E:\\.NET Core(Web App)\\DemoWebApp\\DemoWebApp\\DemoWebApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\FRIDAY\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.3\\microsoft.aspnetcore.authentication.google.3.1.3.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.0.0\\microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.0.0\\microsoft.aspnetcore.cryptography.keyderivation.3.0.0.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
@@ -157,7 +158,7 @@
     "C:\\Users\\FRIDAY\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\FRIDAY\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\FRIDAY\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\FRIDAY\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",

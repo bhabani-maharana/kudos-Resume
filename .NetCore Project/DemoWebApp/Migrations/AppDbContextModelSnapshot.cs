@@ -245,6 +245,53 @@ namespace DemoWebApp.Migrations
                     b.ToTable("Pies");
                 });
 
+            modelBuilder.Entity("DemoWebApp.Models.PieGiftOrder", b =>
+                {
+                    b.Property<int>("PieGiftOrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<int?>("PieId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PieGiftOrderId");
+
+                    b.HasIndex("PieId");
+
+                    b.ToTable("PieGiftOrders");
+                });
+
+            modelBuilder.Entity("DemoWebApp.Models.PieReview", b =>
+                {
+                    b.Property<int>("PieReviewId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("PieId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Review")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PieReviewId");
+
+                    b.HasIndex("PieId");
+
+                    b.ToTable("PieReviews");
+                });
+
             modelBuilder.Entity("DemoWebApp.Models.ShoppingCartItem", b =>
                 {
                     b.Property<int>("ShoppingCartItemId")
@@ -421,6 +468,20 @@ namespace DemoWebApp.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("DemoWebApp.Models.PieGiftOrder", b =>
+                {
+                    b.HasOne("DemoWebApp.Models.Pie", "Pie")
+                        .WithMany()
+                        .HasForeignKey("PieId");
+                });
+
+            modelBuilder.Entity("DemoWebApp.Models.PieReview", b =>
+                {
+                    b.HasOne("DemoWebApp.Models.Pie", "Pie")
+                        .WithMany("PieReviews")
+                        .HasForeignKey("PieId");
                 });
 
             modelBuilder.Entity("DemoWebApp.Models.ShoppingCartItem", b =>

@@ -323,20 +323,21 @@ namespace DemoWebApp.Controllers
 
         [HttpPost]
         public async Task<IActionResult> ManageClaimsForUser(ClaimsManagementViewModel claimsManagementViewModel)
-        {
-            
+        { 
             var user = await _userManager.FindByIdAsync(claimsManagementViewModel.UserId);
-            
+
             if (user == null)
                 return RedirectToAction("UserManagement", _userManager.Users);
 
             var claim =
-              new IdentityUserClaim<string> { ClaimType = claimsManagementViewModel.ClaimId, ClaimValue = claimsManagementViewModel.ClaimId, UserId = claimsManagementViewModel.UserId };
+              new IdentityUserClaim<string> { ClaimType = claimsManagementViewModel.ClaimId, ClaimValue = claimsManagementViewModel.ClaimId};
 
-            claimsManagementViewModel.AllClaimsList.Add(claim);
+            Claim claims = new Claim(claim.ClaimType, claim.ClaimValue);
+
+           //user.Claims.Add(claim); worked in previous versions
+
+            var result = await _userManager.AddClaimAsync(user, claims);
             
-            var result = await _userManager.UpdateAsync(user);
-
             if (result.Succeeded)
                 return RedirectToAction("UserManagement", _userManager.Users);
 

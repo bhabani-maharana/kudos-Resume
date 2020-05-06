@@ -10,5 +10,7 @@ namespace DemoWebApp.Models
         IEnumerable<Pie> AllPies { get; }
         IEnumerable<Pie> PiesOfTheWeek { get; }
         Pie GetPieById(int pieid);
+        void CreatePie(Pie pie);
+        void UpdatePie(Pie pie);
     }
 }

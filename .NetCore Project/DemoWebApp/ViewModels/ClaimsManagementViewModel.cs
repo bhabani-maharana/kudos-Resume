@@ -10,17 +10,17 @@ namespace DemoWebApp.ViewModels
     {
         public string UserId { get; set; }
         public string ClaimId { get; set; }
-        public List<IdentityUserClaim<string>> AllClaimsList { get; set; }
+        public List<string> AllClaimsList { get; set; }
 
-        public ClaimsManagementViewModel()
-        {
-            AllClaimsList = new List<IdentityUserClaim<string>>();
-        }
+        //public ClaimsManagementViewModel()
+        //{
+        //    AllClaimsList = new List<IdentityUserClaim<string>>();
+        //}
     }
 
-    public class UserClaim
-    {
-        public string ClaimType { get; set; }
-        public string ClaimValue { get; set; }
-    }
+    //public class UserClaim
+    //{
+    //    public string ClaimType { get; set; }
+    //    public string ClaimValue { get; set; }
+    //}
 }

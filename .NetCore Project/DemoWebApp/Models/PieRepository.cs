@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoWebApp.Models
 {
-    public class PieRepository : IPieRepository
+    public class PieRepository: IPieRepository
     {
         private readonly AppDbContext _appDbContext;
         public PieRepository(AppDbContext appDbContext)
@@ -31,7 +31,20 @@ namespace DemoWebApp.Models
 
         public Pie GetPieById(int pieid)
         {
-            return _appDbContext.Pies.FirstOrDefault(p => p.PieId == pieid);
+            return _appDbContext.Pies.Include(p => p.PieReviews).FirstOrDefault(p => p.PieId == pieid);
+
+        }
+
+        public void UpdatePie(Pie pie)
+        {
+            _appDbContext.Pies.Update(pie);
+            _appDbContext.SaveChanges();
+        }
+
+        public void CreatePie(Pie pie)
+        {
+            _appDbContext.Pies.Add(pie);
+            _appDbContext.SaveChanges();
         }
     }
 }
