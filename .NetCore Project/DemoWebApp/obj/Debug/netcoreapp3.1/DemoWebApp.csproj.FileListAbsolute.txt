@@ -169,8 +169,5 @@ E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\bin\Debug\netcoreapp3.1\Microsoft.As
 E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\Razor\Views\PieManagement\AddPie.cshtml.g.cs
 E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\Razor\Views\PieManagement\EditPie.cshtml.g.cs
 E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\DemoWebApp.csprojAssemblyReference.cache
-E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\DemoWebApp.csproj.CoreCompileInputs.cache
-E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\DemoWebApp.MvcApplicationPartsAssemblyInfo.cs
-E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\DemoWebApp.MvcApplicationPartsAssemblyInfo.cache
 E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\Razor\Views\PieGift\Index.cshtml.g.cs
 E:\.NET Core(Web App)\DemoWebApp\DemoWebApp\obj\Debug\netcoreapp3.1\Razor\Views\PieGift\PieGiftOrderComplete.cshtml.g.cs
